@@ -71,7 +71,6 @@ function getChildren(path) {
     }
     return !value.includes('//');
   });
-
   files.unshift(root);
   return files;
 }
