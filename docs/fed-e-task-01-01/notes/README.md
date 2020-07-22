@@ -30,41 +30,43 @@
 
 ## 目录
 
-- [函数是一等公民(First-class Function)](first-class-function)
+- [函数是一等公民(First-class Function)](w-001-first-class-function)
 
-- [高阶函数(Higher-order function)](higher-order-function)
+- [高阶函数(Higher-order function)](w-002-higher-order-function)
 
-- [闭包(Closure)](closure)
+- [闭包(Closure)](w-003-closure)
 
-- [纯函数(Pure Functions)](pure-functions)
+- [纯函数(Pure Functions)](w-004-pure-functions)
 
-- [柯里化 (Haskell Brooks Curry)](curry)
+- [柯里化 (Haskell Brooks Curry)](w-005-curry)
 
-- [函数组合(compose)](compose)
+- [函数组合(compose)](w-006-compose)
 
-- [Point Free](point-free)
+- [Point Free](w-007-point-free)
 
-- [函子(Functor)](functor)
+- [函子(Functor)](w-008-functor)
 
-- [MayBe 函子](maybe)
+- [MayBe 函子](w-009-maybe)
 
-- [Either 函子](either)
+- [Either 函子](w-010-either)
 
-- [IO 函子](io)
+- [IO 函子](w-011-io)
 
-- [Task 函子](task)
+- [Task 函子](w-012-task)
 
-- [Monad 函子](monad)
+- [Monad 函子](w-013-monad)
 
-- [Synchronous 同步](synchronous)
+- [Asynchronous 异步](w-014-asynchronous)
 
-- [Promise](promise)
+- [Synchronous 同步](w-015-synchronous)
 
-- [Generator （生成器）](generator)
+- [Promise](w-016-promise)
 
-- [Async 函数](async-await)
+- [Generator （生成器）](w-017-generator)
 
-- [手写 Promise](my-promise)
+- [Async 函数](w-018-async-await)
+
+- [手写 Promise](w-019-my-promise)
 
 ## 附录
 

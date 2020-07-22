@@ -124,7 +124,7 @@ TypeScript 是 JavaScript 类型的超集，可编译为普通 JavaScript。
 
 这个算法假定设置一个叫做根（root）的对象（在 Javascript 里，根是全局对象）。垃圾回收器将定期从根开始，找所有从根开始引用的对象，对其进行标记，垃圾回收器将遍历所有对象清除没有标记的对象。
 
-![notes](notes/optimization/memory-management/img/1.png)
+![notes](notes/w-006-optimization/w-001-memory-management/img/1.png)
 
 ![topic](topic-img/12.png)
 
@@ -136,7 +136,7 @@ TypeScript 是 JavaScript 类型的超集，可编译为普通 JavaScript。
 - 一轮 GC 还存活的新生代需要晋升
 - 对象从 From 空间复制到 To 空间时，如果 To 空间已经被使用了超过 25%，那么这个对象直接被复制到老生代
 
-![notes](notes/optimization/V8-engine/img/1.png)
+![notes](notes/w-006-optimization/w-002-V8-engine/img/1.png)
 
 ![topic](topic-img/13.png)
 
@@ -144,4 +144,4 @@ TypeScript 是 JavaScript 类型的超集，可编译为普通 JavaScript。
 
 由于全停顿会造成了浏览器一段时间无响应，所以 V8 使用了一种增量标记的方式，将完整的标记拆分成很多部分，每做完一部分就停下来，让 JS 的应用逻辑执行一会，这样垃圾回收与应用逻辑交替完成。经过增量标记的改进后，垃圾回收的最大停顿时间可以减少到原来的 1/6 左右
 
-![notes](notes/optimization/V8-engine/img/2.png)
+![notes](notes/w-006-optimization/w-002-V8-engine/img/2.png)
