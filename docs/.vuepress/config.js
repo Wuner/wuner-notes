@@ -89,6 +89,6 @@ function readDirSync(dirPath) {
         );
     }
   });
-
+  console.log(result);
   return result;
 }

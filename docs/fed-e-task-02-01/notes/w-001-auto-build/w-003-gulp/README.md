@@ -1,135 +1,10 @@
-# 自动化构建
-
-随着互联网的飞速发展,前端代码复杂度和规模增加,使用构建工具实现自动化的前端开发流程很有必要.前端自动化构建工具具有代码压缩,编译,监控等功能,主要完成前端一些反复重复的任务.本文将介绍的前端自动化构建工具有 Grunt 、Gulp 、FIS。
-
-## 自动化构建工具
-
-### [Grunt](https://www.gruntjs.net/)
-
-#### 安装 grunt 和 grunt-contrib-uglify
-
-```text
-npm i grunt grunt-contrib-uglify -D
-```
-
-#### Gruntfile
-
-Gruntfile.js 或 Gruntfile.coffee 文件是有效的 JavaScript 或 CoffeeScript 文件，应当放在你的项目根目录中，和 package.json 文件在同一目录层级，并和项目源码一起加入源码管理器。
-
-Gruntfile 由以下几部分构成：
-
-- "wrapper" 函数
-- 项目与任务配置
-- 加载 grunt 插件和任务
-- 自定义任务
-
-#### 示例
-
-```javascript
-module.exports = (grunt) => {
-  // 在这里写与grunt有关的功能
-
-  // 项目配置
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    uglify: {
-      options: {
-        banner:
-          '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
-      },
-      build: {
-        src: 'src/js/<%= pkg.name %>.js',
-        dest: 'dist/js/<%= pkg.name %>.min.js',
-      },
-    },
-  });
-
-  // 加载能够提供"uglify"任务的插件。
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-
-  // Default task(s).
-  grunt.registerTask('default', ['log', 'uglify']);
-
-  grunt.registerTask('log', '打印日志', () => {
-    console.log('执行打印日志');
-  });
-};
-```
-
-下面我们来逐步分析
-
-#### "wrapper" 函数
-
-每一份 Gruntfile （和 grunt 插件）都遵循同样的格式，你所书写的 Grunt 代码必须放在此函数内：
-
-```javascript
-module.exports = (grunt) => {
-  // 在这里写与grunt有关的功能
-};
-```
-
-#### [项目和任务配置](https://www.gruntjs.net/configuring-tasks)
-
-大部分的 Grunt 任务都依赖某些配置数据，这些数据被定义在一个 object 内，并传递给 `grunt.initConfig` 方法。
-
-在下面的案例中，`grunt.file.readJSON('package.json')` 将存储在 package.json 文件中的 JSON 元数据引入到 grunt config 中。 由于`<% %>`模板字符串可以引用任意的配置属性，因此可以通过这种方式来指定诸如文件路径和文件列表类型的配置数据，从而减少一些重复的工作。
-
-你可以在这个配置对象中(传递给 initConfig()方法的对象)存储任意的数据，只要它不与你任务配置所需的属性冲突，否则会被忽略。此外，由于这本身就是 JavaScript，你不仅限于使用 JSON；你可以在这里使用任意的有效的 JS 代码。如果有必要，你甚至可以以编程的方式生成配置。
-
-与大多数 task 一样，`grunt-contrib-uglify` 插件中的 `uglify` 任务要求它的配置被指定在一个同名属性中。在这里有一个例子, 我们指定了一个 `banner` 选项(用于在文件顶部生成一个注释)，紧接着是一个单一的名为 `build` 的 `uglify` 目标，用于将一个 js 文件压缩为一个目标文件。
-
-```javascript
-module.exports = (grunt) => {
-  // 在这里写与grunt有关的功能
-
-  // 项目配置
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    uglify: {
-      options: {
-        banner:
-          '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
-      },
-      build: {
-        src: 'src/<%= pkg.name %>.js',
-        dest: 'dist/<%= pkg.name %>.min.js',
-      },
-    },
-  });
-};
-```
-
-#### [加载 Grunt 插件和任务](https://www.gruntjs.net/plugins)
-
-像 concatenation、[minification]、grunt-contrib-uglify 和 linting 这些常用的任务（task）都已经以 grunt 插件的形式被开发出来了。只要在 package.json 文件中被列为 dependency（依赖）的包，并通过 npm install 安装之后，都可以在 Gruntfile 中以简单命令的形式使用：
-
-```javascript
-// 加载能够提供"uglify"任务的插件。
-grunt.loadNpmTasks('grunt-contrib-uglify');
-```
-
-注意： `grunt --help` 命令将列出所有可用的任务。
-
-#### [自定义任务](https://www.gruntjs.net/creating-tasks)
-
-通过定义 `default` 任务，可以让 `Grunt` 默认执行一个或多个任务。在下面的这个案例中，执行 `grunt` 命令时如果不指定一个任务的话，将会执行 `uglify` 任务。这和执行 `grunt uglify` 或者 `grunt default` 的效果一样。`default` 任务列表数组中可以指定任意数目的任务（可以带参数）。
-
-```javascript
-// Default task(s).
-grunt.registerTask('default', ['log', 'uglify']);
-
-grunt.registerTask('log', '打印日志', () => {
-  console.log('执行打印日志');
-});
-```
-
-### [Gulp](https://www.gulpjs.com.cn/)
+# [Gulp](https://www.gulpjs.com.cn/)
 
 用自动化构建工具增强你的工作流程！
 
 gulp 将开发流程中让人痛苦或耗时的任务自动化，从而减少你所浪费的时间、创造更大价值。
 
-#### 基本使用
+## 基本使用
 
 > 安装 gulp
 
@@ -182,11 +57,11 @@ npm run gulp foo
 
 <span id="createTask"></span>
 
-#### 创建任务
+## 创建任务
 
 每个 gulp 任务（task）都是一个异步的 JavaScript 函数，此函数是一个可以接收 callback 作为参数的函数，或者是一个返回 stream、promise、event emitter、child process 或 observable (后面会详细讲解) 类型值的函数。由于某些平台的限制而不支持异步任务，因此 gulp 还提供了一个漂亮 替代品。
 
-##### 导出任务
+### 导出任务
 
 任务（tasks）可以是 public（公开） 或 private（私有） 类型的。
 
@@ -216,7 +91,7 @@ exports.build = build;
 exports.default = series(clean, build);
 ```
 
-##### 组合任务
+### 组合任务
 
 Gulp 提供了两个强大的组合方法： series() 和 parallel()，允许将多个独立的任务组合为一个更大的操作。这两个方法都可以接受任意数目的任务（task）函数或已经组合的操作。series() 和 parallel() 可以互相嵌套至任意深度。
 
@@ -380,17 +255,17 @@ function javascript(cb) {
 exports.build = series(clean, parallel(css, javascript));
 ```
 
-#### 异步执行
+## 异步执行
 
 Node 库以多种方式处理异步功能。最常见的模式是 [error-first callbacks](http://nodejs.cn/api/errors.html#errors_error_first_callbacks)，但是你还可能会遇到 [streams](http://nodejs.cn/api/stream.html#stream_stream)、[promises](../../../../fed-e-task-01-01/notes/promise)、[event emitters](http://nodejs.cn/api/events.html#events_events)、[child processes](http://nodejs.cn/api/child_process.html#child_process_child_process), 或 [observables](https://github.com/tc39/proposal-observable/blob/master/README.md)。gulp 任务（task）规范化了所有这些类型的异步功能。
 
-##### 任务（task）完成通知
+### 任务（task）完成通知
 
 当从任务（task）中返回 stream、promise、event emitter、child process 或 observable 时，成功或错误值将通知 gulp 是否继续执行或结束。如果任务（task）出错，gulp 将立即结束执行并显示该错误。
 
 当使用 series() 组合多个任务（task）时，任何一个任务（task）的错误将导致整个任务组合结束，并且不会进一步执行其他任务。当使用 parallel() 组合多个任务（task）时，一个任务的错误将结束整个任务组合的结束，但是其他并行的任务（task）可能会执行完，也可能没有执行完。
 
-###### 返回 stream
+#### 返回 stream
 
 ```javascript
 const { src, dest } = require('gulp');
@@ -400,7 +275,7 @@ const streamTask = () => src('src/css/*.css').pipe(dest('dist/css'));
 exports.default = streamTask;
 ```
 
-###### 返回 promise
+#### 返回 promise
 
 ```javascript
 const promiseTask = () => Promise.resolve('the value is ignored');
@@ -408,7 +283,7 @@ const promiseTask = () => Promise.resolve('the value is ignored');
 exports.default = promiseTask;
 ```
 
-###### 返回 event emitter
+#### 返回 event emitter
 
 ```javascript
 const { EventEmitter } = require('events');
@@ -423,7 +298,7 @@ const eventEmitterTask = () => {
 exports.default = eventEmitterTask;
 ```
 
-###### 返回 child process
+#### 返回 child process
 
 ```javascript
 const { exec } = require('child_process');
@@ -433,7 +308,7 @@ const childProcessTask = () => exec('date');
 exports.default = childProcessTask;
 ```
 
-###### 返回 observable
+#### 返回 observable
 
 ```javascript
 const { of } = require('rxjs');
@@ -443,7 +318,7 @@ const observableTask = () => of(1, 2, 3);
 exports.default = observableTask;
 ```
 
-###### 使用 callback
+#### 使用 callback
 
 如果任务（task）不返回任何内容，则必须使用 callback 来指示任务已完成。在如下示例中，callback 将作为唯一一个名为 cb() 的参数传递给你的任务（task）。
 
@@ -479,13 +354,13 @@ const passingCallback = (cb) => {
 exports.default = passingCallback;
 ```
 
-###### gulp 不再支持同步任务（Synchronous tasks）
+#### gulp 不再支持同步任务（Synchronous tasks）
 
 gulp 不再支持同步任务（Synchronous tasks）了。因为同步任务常常会导致难以调试的细微错误，例如忘记从任务（task）中返回 stream。
 
 当你看到 "Did you forget to signal async completion?" 警告时，说明你并未使用前面提到的返回方式。你需要使用 callback 或返回 stream、promise、event emitter、child process、observable 来解决此问题。
 
-###### 使用 async/await
+#### 使用 async/await
 
 如果不使用前面提供到几种方式，你还可以将任务（task）定义为一个 async 函数，它将利用 promise 对你的任务（task）进行包装。这将允许你使用 await 处理 promise，并使用其他同步代码。
 
@@ -501,7 +376,7 @@ const asyncAwaitTask = async () => {
 exports.default = asyncAwaitTask;
 ```
 
-#### 文件处理
+## 文件处理
 
 gulp 暴露了 src() 和 dest() 方法用于处理计算机上存放的文件。
 
@@ -524,7 +399,7 @@ dest() 接受一个输出目录作为参数，并且它还会产生一个 Node �
 
 大多数情况下，利用 .pipe() 方法将插件放置在 src() 和 dest() 之间，并转换流（stream）中的文件。
 
-##### 向流（stream）中添加文件
+### 向流（stream）中添加文件
 
 src() 也可以放在管道（pipeline）的中间，以根据给定的 glob 向流（stream）中添加文件。新加入的文件只对后续的转换可用。如果 glob 匹配的文件与之前的有重复，仍然会再次添加文件。
 
@@ -545,7 +420,7 @@ const streamAddJsTask = () =>
 exports.default = streamAddJsTask;
 ```
 
-##### 分阶段输出
+### 分阶段输出
 
 dest() 可以用在管道（pipeline）中间用于将文件的中间状态写入文件系统。当接收到一个文件时，当前状态的文件将被写入文件系统，文件路径也将被修改以反映输出文件的新位置，然后该文件继续沿着管道（pipeline）传输。
 
@@ -569,7 +444,7 @@ const streamSegmentJsTask = () =>
 exports.default = streamSegmentJsTask;
 ```
 
-##### 模式：流动（streaming）、缓冲（buffered）和空（empty）模式
+### 模式：流动（streaming）、缓冲（buffered）和空（empty）模式
 
 src() 可以工作在三种模式下：缓冲（buffering）、流动（streaming）和空（empty）模式。这些模式可以通过对 src() 的 buffer 和 read [参数](https://www.gulpjs.com.cn/docs/api/src/#options) 进行设置。
 
@@ -577,8 +452,6 @@ src() 可以工作在三种模式下：缓冲（buffering）、流动（streamin
 流动（Streaming）模式的存在主要用于操作无法放入内存中的大文件，例如巨幅图像或电影。文件内容从文件系统中以小块的方式流式传输，而不是一次性全部加载。如果需要流动（streaming）模式，请查找支持此模式的插件或自己编写。
 空（Empty）模式不包含任何内容，仅在处理文件元数据时有用。
 
-#### [使用插件](https://www.gulpjs.com.cn/docs/getting-started/using-plugins/)
+## [使用插件](https://www.gulpjs.com.cn/docs/getting-started/using-plugins/)
 
-#### [文件监控](https://www.gulpjs.com.cn/docs/getting-started/watching-files/)
-
-## [FIS3](http://fis.baidu.com/)
+## [文件监控](https://www.gulpjs.com.cn/docs/getting-started/watching-files/)
