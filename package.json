@@ -1,0 +1,34 @@
+{
+  "name": "wuner-notes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.4",
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-flow": "^7.10.4",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.3.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-vue": "^6.2.2",
+    "flow-bin": "^0.128.0",
+    "folktale": "^2.3.2",
+    "html-webpack-plugin": "^4.3.0",
+    "lodash": "^4.17.15",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.6",
+    "vuepress": "^1.5.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
