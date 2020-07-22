@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /icons/logo.png
+heroImage: /logo.png
 title: a
 actionText: 开始 →
 actionLink: /fed-e-task-01-01/notes/
