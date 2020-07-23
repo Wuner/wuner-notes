@@ -1,10 +1,8 @@
 # 作业
 
-## [学习笔记](/fed-e-task-02-01/notes/README.md)
+## [学习笔记](notes/README.md)
 
-## 题目
-
-### 简答题
+## 简答题
 
 1. 谈谈你对工程化的初步认识，结合你之前遇到过的问题说出三个以上工程化能够解决问题或者带来的价值。
 
@@ -21,16 +19,16 @@
 
    提供项目规范和约定，便于多人协作，利于项目的后期维护。
 
-### 编程题
+## 编程题
 
 1. 概述脚手架实现的过程，并使用 NodeJS 完成一个自定义的小型脚手架工具
 
-   [答案](code/first-question)
+   [答案](code/question-1)
 
 2. 尝试使用 Gulp 完成项目的自动化构建
 
-   [答案](code/second-question)
+   [答案](code/question-2)
 
 3. 使用 Grunt 完成项目的自动化构建
 
-   [答案](code/third-question)
+   [答案](code/question-3)

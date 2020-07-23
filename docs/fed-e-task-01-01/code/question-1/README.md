@@ -1,8 +1,8 @@
-# 第一题
+# 编程第一题
 
 ## 题目
 
-![note](img/topic.jpg)
+![note](./img/topic.jpg)
 
 ## 解答
 

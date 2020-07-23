@@ -1,24 +1,24 @@
-# 第三题
+# 编程第三题
 
 ## 题目
 
-![note](img/topic.png)
+![note](./img/topic.png)
 
 ### 练习 1
 
-![note](img/topic1.png)
+![note](./img/topic1.png)
 
 ### 练习 2
 
-![note](img/topic2.png)
+![note](./img/topic2.png)
 
 ### 练习 3
 
-![note](img/topic3.png)
+![note](./img/topic3.png)
 
 ### 练习 4
 
-![note](img/topic4.png)
+![note](./img/topic4.png)
 
 ```javascript
 const fp = require('lodash/fp');

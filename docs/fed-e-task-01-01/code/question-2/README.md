@@ -1,24 +1,24 @@
-# 第二题
+# 编程第二题
 
 ## 题目
 
-![Alt text](img/topic.jpg)
+![Alt text](./img/topic.jpg)
 
 ### 练习一
 
-![Alt text](img/topic1.jpg)
+![Alt text](./img/topic1.jpg)
 
 ### 练习二
 
-![note](img/topic2.jpg)
+![note](./img/topic2.jpg)
 
 ### 练习三
 
-![Alt text](img/topic3.jpg)
+![Alt text](./img/topic3.jpg)
 
 ### 练习四
 
-![Alt text](img/topic4.jpg)
+![Alt text](./img/topic4.jpg)
 
 ```javascript
 const fp = require('lodash/fp');

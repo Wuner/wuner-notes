@@ -32,7 +32,7 @@ Event Loop 它最主要是分三部分：主线程、宏任务（macrotask）、
 
 ## 代码题
 
-- [第一题](/fed-e-task-01-01/code/one)
-- [第二题](/fed-e-task-01-01/code/two)
-- [第三题](/fed-e-task-01-01/code/three)
-- [第四题](/fed-e-task-01-01/code/four)
+- [第一题](code/question-1)
+- [第二题](code/question-2)
+- [第三题](code/question-3)
+- [第四题](code/question-4)

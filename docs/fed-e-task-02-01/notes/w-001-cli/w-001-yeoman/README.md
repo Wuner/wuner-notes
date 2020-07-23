@@ -35,19 +35,19 @@ yo node:sub --help
 
 这里我们使用 node:cli 子生成器
 
-```cmd
+```text
 yo node:cli
 ```
 
 link 到全局
 
-```cmd
+```text
 npm link
 ```
 
 查看是否 link 到全局
 
-```cmd
+```text
 my-module --help
 ```
 

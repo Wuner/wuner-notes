@@ -21,5 +21,5 @@
 - React => create-react-app
 - Vue => vue-cli
 - Angular => angular-cli
-- [yeoman](w-005-yeoman)
-- [plop](w-006-plop)
+- [yeoman](w-001-yeoman)
+- [plop](w-002-plop)

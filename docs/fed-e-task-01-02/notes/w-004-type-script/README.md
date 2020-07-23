@@ -14,19 +14,19 @@ TypeScript 是渐进式的
 
 这里是针对项目，不进行全局安装
 
-```cmd
+```text
 npm i typescript -D
 ```
 
 使用 ts-node 可以直接在 node 环境下运行 ts 文件，方便开发环境测试
 
-```cmd
+```text
 npm i ts-node -D
 ```
 
 运行
 
-```cmd
+```text
 ts-node 文件路径
 ```
 
@@ -40,7 +40,7 @@ test('typescript');
 
 编译 ts 代码，生成一个 index.js 文件，并被转换为 es5
 
-```cmd
+```text
 tsc index
 ```
 
@@ -57,7 +57,7 @@ test('typescript');
 
 生成配置文件 tsconfig.json
 
-```cmd
+```text
 tsc --init
 ```
 

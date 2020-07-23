@@ -4,6 +4,6 @@
 
 ## 自动化构建工具
 
-- [Grunt](w-002-grunt)
-- [Gulp](w-003-gulp)
+- [Grunt](w-001-grunt)
+- [Gulp](w-002-gulp)
 - [FIS3](http://fis.baidu.com/)
