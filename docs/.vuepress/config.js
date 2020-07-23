@@ -48,19 +48,19 @@ module.exports = {
         text: 'Notes',
         items: [
           {
-            text: 'part·1 module-1',
+            text: 'JavaScript 深度剖析(1)',
             link: '/fed-e-task-01-01/notes/',
           },
           {
-            text: 'part·1 module-2',
+            text: 'JavaScript 深度剖析(2)',
             link: '/fed-e-task-01-02/notes/',
           },
           {
-            text: 'part·2 module-1',
+            text: '前端工程化(1)',
             link: '/fed-e-task-02-01/notes/',
           },
           {
-            text: 'part·2 module-2',
+            text: '前端工程化(2)',
             link: '/fed-e-task-02-02/notes/',
           },
         ],
@@ -69,19 +69,19 @@ module.exports = {
         text: 'Questions',
         items: [
           {
-            text: 'part·1 module-1',
+            text: 'JavaScript 深度剖析(1) 题目',
             link: '/fed-e-task-01-01/',
           },
           {
-            text: 'part·1 module-2',
+            text: 'JavaScript 深度剖析(2) 题目',
             link: '/fed-e-task-01-02/',
           },
           {
-            text: 'part·2 module-1',
+            text: '前端工程化(1) 题目',
             link: '/fed-e-task-02-01/',
           },
           {
-            text: 'part·2 module-2',
+            text: '前端工程化(2) 题目',
             link: '/fed-e-task-02-02/',
           },
         ],
@@ -91,28 +91,28 @@ module.exports = {
       // notes
       '/fed-e-task-01-01/notes/': [
         {
-          title: 'part·1 module-1',
+          title: 'JavaScript 深度剖析(1)',
           collapsable: false,
           children: getChildren('docs/fed-e-task-01-01/notes/'),
         },
       ],
       '/fed-e-task-01-02/notes/': [
         {
-          title: 'part·1 module-2',
+          title: 'JavaScript 深度剖析(2)',
           collapsable: false,
           children: getChildren('docs/fed-e-task-01-02/notes/'),
         },
       ],
       '/fed-e-task-02-01/notes/': [
         {
-          title: 'part·2 module-1',
+          title: '前端工程化(1)',
           collapsable: false,
           children: getChildren('docs/fed-e-task-02-01/notes/'),
         },
       ],
       '/fed-e-task-02-02/notes/': [
         {
-          title: 'part·2 module-2',
+          title: '前端工程化(2)',
           collapsable: false,
           children: getChildren('docs/fed-e-task-02-02/notes/'),
         },
@@ -120,28 +120,28 @@ module.exports = {
       // Questions
       '/fed-e-task-01-01/': [
         {
-          title: 'part·1 module-1',
+          title: 'JavaScript 深度剖析(1) 题目',
           collapsable: false,
           children: getQuestionsChildren('/fed-e-task-01-01/'),
         },
       ],
       '/fed-e-task-01-02/': [
         {
-          title: 'part·1 module-2',
+          title: 'JavaScript 深度剖析(2) 题目',
           collapsable: false,
           children: getQuestionsChildren('/fed-e-task-01-02/'),
         },
       ],
       '/fed-e-task-02-01/': [
         {
-          title: 'part·2 module-1',
+          title: '前端工程化(1) 题目',
           collapsable: false,
           children: getQuestionsChildren('/fed-e-task-02-01/'),
         },
       ],
       '/fed-e-task-02-02/': [
         {
-          title: 'part·2 module-2',
+          title: '前端工程化(2) 题目',
           collapsable: false,
           children: getQuestionsChildren('/fed-e-task-02-02/'),
         },
