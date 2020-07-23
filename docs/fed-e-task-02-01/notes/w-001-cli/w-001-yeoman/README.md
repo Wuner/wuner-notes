@@ -8,12 +8,15 @@
 npm i yo -g
 ```
 
-- 安装对应的 generator
-  这里安装[generator-none](https://github.com/yeoman/generator-node)
+## 安装对应的 generator
+
+这里安装[generator-none](https://github.com/yeoman/generator-node)
 
 ```text
 npm i generator-node -g
 ```
+
+## 用法
 
 - 通过 yo 运行 generator
 

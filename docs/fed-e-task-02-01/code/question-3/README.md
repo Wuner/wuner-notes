@@ -190,7 +190,7 @@ watch: {
 },
 ```
 
-### [完整示例](./gruntfile.js)
+### [完整示例](https://gitee.com/HeathHwn/wuner-notes/blob/master/docs/fed-e-task-02-01/code/question-3/gruntfile.js)
 
 ```javascript
 module.exports = (grunt) => {

@@ -192,7 +192,7 @@ const clean = () => {
 };
 ```
 
-### [完整示例](./gulpfile.js)
+### [完整示例](https://gitee.com/HeathHwn/wuner-notes/blob/master/docs/fed-e-task-02-01/code/question-2/gulpfile.js)
 
 ```javascript
 // 实现这个项目的构建任务

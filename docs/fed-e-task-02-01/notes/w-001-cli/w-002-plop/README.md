@@ -20,6 +20,8 @@ npm i plop -D
 npm i plop -g
 ```
 
+## 用法
+
 在你的项目根目录创建`plopfile.js`
 
 ```javascript
