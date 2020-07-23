@@ -20,11 +20,8 @@ webpack 提供几种可选方式，帮助你在代码发生变化后自动编译
 webpack --watch
 ```
 
-如果能够自动刷新浏览器就更好了，因此接下来我们会尝试通过 webpack-dev-server 实现此功能。
+如果能够自动刷新浏览器就更好了，因此可以通过 [browser-sync](http://www.browsersync.cn/docs/options/) 实现此功能。
 
-缺点:
-
-- 每次编译都要读写磁盘
-- 为了看到修改后的实际效果，你需要刷新浏览器
+缺点: 每次编译都要读写磁盘
 
 ## 使用 webpack-dev-server

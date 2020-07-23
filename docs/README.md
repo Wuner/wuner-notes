@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo.png
 title: a
-actionText: 开始 →
+actionText: start →
 actionLink: /fed-e-task-01-01/notes/
 features:
   - title: Feature-rich

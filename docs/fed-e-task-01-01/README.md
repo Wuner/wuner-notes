@@ -4,6 +4,8 @@
 
 ## 简答题
 
+![question](./topic-imgs/1.png)
+
 Event Loop 用于等待和发送消息和事件。
 Event Loop 它最主要是分三部分：主线程、宏任务（macrotask）、微任务（microtask）
 
