@@ -2,7 +2,7 @@
 
 ## 使用
 
-```text
+```
 grunt build
 grunt dev
 grunt clean

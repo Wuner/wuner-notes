@@ -6,7 +6,7 @@
 
 ### 安装
 
-```text
+```
 npm i style-loader -D
 ```
 
@@ -33,7 +33,7 @@ const config = {
 
 ### 安装
 
-```text
+```
 npm i css-loader -D
 ```
 
@@ -60,7 +60,7 @@ const config = {
 
 ### 安装
 
-```text
+```
 npm i less-loader less -D
 ```
 
@@ -95,7 +95,7 @@ const config = {
 
 ### 安装
 
-```text
+```
 npm i sass-loader node-sass webpack -D
 ```
 
@@ -130,7 +130,7 @@ const config = {
 
 ### 安装
 
-```text
+```
 npm i postcss-loader -D
 ```
 
@@ -176,7 +176,7 @@ const config = {
 
 ### 安装
 
-```text
+```
 npm i stylus-loader stylus -D
 ```
 

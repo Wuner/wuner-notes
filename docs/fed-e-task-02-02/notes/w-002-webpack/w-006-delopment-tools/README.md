@@ -16,7 +16,7 @@ webpack 提供几种可选方式，帮助你在代码发生变化后自动编译
 
 启动 webpack watch mode
 
-```text
+```
 webpack --watch
 ```
 
@@ -25,3 +25,11 @@ webpack --watch
 缺点: 每次编译都要读写磁盘
 
 ## 使用 webpack-dev-server
+
+webpack-dev-server 为你提供了一个简单的 web server，并且具有 live reloading(实时重新加载) 功能。
+
+### 安装
+
+```
+
+```

@@ -4,7 +4,7 @@
 
 - 全局安装 yo
 
-```text
+```
 npm i yo -g
 ```
 
@@ -12,7 +12,7 @@ npm i yo -g
 
 这里安装[generator-none](https://github.com/yeoman/generator-node)
 
-```text
+```
 npm i generator-node -g
 ```
 
@@ -20,7 +20,7 @@ npm i generator-node -g
 
 - 通过 yo 运行 generator
 
-```text
+```
 mkdir my-module
 cd my-module
 yo node
@@ -32,25 +32,25 @@ yo node
 
 可以通过运行下面的命令来查看每个子生成器的选项。
 
-```text
+```
 yo node:sub --help
 ```
 
 这里我们使用 node:cli 子生成器
 
-```text
+```
 yo node:cli
 ```
 
 link 到全局
 
-```text
+```
 npm link
 ```
 
 查看是否 link 到全局
 
-```text
+```
 my-module --help
 ```
 
@@ -88,7 +88,7 @@ name 属性必须以 generator-为前缀。 关键字属性必须包含`yeoman-g
 
 你应该确保将最新版本的 yeoman-generator 设置为依赖项。 你可以通过运行以下命令执行此操作：
 
-```text
+```
 npm install --save yeoman-generator
 ```
 
@@ -106,7 +106,7 @@ Yeoman 的功能取决于你如何构建目录树。 每个子生成器都包含
 
 在一个示例项目中，目录树可能如下所示：
 
-```text
+```
 └───generators/........................生成器目录
     ├───app/...........................默认生成器目录
     │   └───index.js..................默认生成器实现
@@ -121,7 +121,7 @@ Yeoman 允许两种不同的目录结构。 它会在`./`和`generators/`中查�
 
 前面的示例也可以编写如下：
 
-```text
+```
 ├───app/...............................默认生成器目录
 │   └───index.js......................默认生成器实现
 └───router/............................其他生成器目录
@@ -223,7 +223,7 @@ module.exports = class extends Generator {
 
 在文件夹根目录下，执行：
 
-```text
+```
 npm link
 ```
 
@@ -241,7 +241,7 @@ Yeoman 文件实用程序基于这样一个理念：磁盘上总是有两个位�
 
 你可以使用`this.destinationRoot()`或通过使用`this.destinationPath('sub/path')`联接路径来获取目标路径。
 
-```text
+```
 // Given destination root is ~/projects
 class extends Generator {
   paths() {
@@ -262,7 +262,7 @@ class extends Generator {
 
 你可以使用`this.sourceRoot()`或通过使用`this.templatePath('app/index.js')`连接路径来获取路径值。
 
-```text
+```
 class extends Generator {
   paths() {
     this.sourceRoot();
@@ -309,7 +309,7 @@ Yeoman 在覆盖用户文件时非常小心。 基本上，在预先存在的文
 
 然后，在将内容作为模板处理时，我们使用[copyTpl](https://github.com/sboudrias/mem-fs-editor#copytplfrom-to-context-templateoptions--copyoptions)方法复制文件。`copyTpl` 使用 [ejs 模板语法](https://ejs.co/)。
 
-```text
+```
 class extends Generator {
   writing() {
     this.fs.copyTpl(
@@ -323,7 +323,7 @@ class extends Generator {
 
 一种非常常见的情况是在提示阶段存储用户输入，并将其用于模板：
 
-```text
+```
 class extends Generator {
   async prompting() {
     this.answers = await this.prompt([{

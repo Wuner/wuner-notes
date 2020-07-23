@@ -16,7 +16,7 @@ Babel 是 JavaScript 代码的编译器，具有对 Flow 的支持。Babel 可�
 
 首先安装@babel/core，@babel/cli 并@babel/preset-flow 使用 Yarn 或 npm。
 
-```text
+```
 npm install --save-dev @babel/core @babel/cli @babel/preset-flow
 ```
 
@@ -30,7 +30,7 @@ npm install --save-dev @babel/core @babel/cli @babel/preset-flow
 
 剔除命令运行
 
-```text
+```
 babel 输入需剔除的文件或文件夹路径 -d 输出文件夹
 ```
 
@@ -38,7 +38,7 @@ babel 输入需剔除的文件或文件夹路径 -d 输出文件夹
 
 安装 flow-bin
 
-```text
+```
 npm install --save-dev flow-bin
 ```
 
@@ -54,13 +54,13 @@ npm install --save-dev flow-bin
 
 首次安装后，需要先初始化
 
-```text
+```
 npm run flow init
 ```
 
 init 之后，运行 flow
 
-```text
+```
 npm run flow
 ```
 

@@ -8,7 +8,7 @@ gulp 将开发流程中让人痛苦或耗时的任务自动化，从而减少你
 
 > 安装 gulp
 
-```text
+```
 npm i gulp -D
 ```
 
@@ -45,13 +45,13 @@ exports.foo = fooTask;
 
 默认执行 default 任务
 
-```text
+```
 npm run gulp
 ```
 
 执行 foo 任务
 
-```text
+```
 npm run gulp foo
 ```
 

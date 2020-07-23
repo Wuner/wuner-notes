@@ -2,7 +2,7 @@
 
 ## 安装 grunt 和 grunt-contrib-uglify
 
-```text
+```
 npm i grunt grunt-contrib-uglify -D
 ```
 

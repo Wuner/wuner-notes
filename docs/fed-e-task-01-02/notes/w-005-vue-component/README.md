@@ -34,7 +34,7 @@ export default Vue.extend({
 
 装饰器函数接收的参数就是以前的组件选项对象（data、props、methods 之类）
 
-```text
+```
 import Vue from 'vue';
 import Component from 'vue-class-component';
 
@@ -74,7 +74,7 @@ export default class Button extends Vue {
 
 这种方式继续放大了 class 这种组件定义方法。
 
-```text
+```
 import { Vue, Component, Prop } from 'vue-property-decorator'
 
 @Component
@@ -109,7 +109,7 @@ No Class APIs，只用 Options APIs。
 
 插件的类型扩展，使用类型补充声明
 
-```text
+```
 import { AxiosInstance } from 'axios'
 
 declare module 'vue/types/vue' {

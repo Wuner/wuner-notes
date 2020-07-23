@@ -6,7 +6,7 @@
 
 ### 安装
 
-```text
+```
 npm i raw-loader -D
 ```
 
@@ -31,7 +31,7 @@ module.exports = {
 
 #### 通过命令行（CLI）
 
-```text
+```
 webpack --module-bind 'txt=raw-loader'
 ```
 
@@ -47,7 +47,7 @@ import txt from 'raw-loader!./assets/index.txt';
 
 ### 安装
 
-```text
+```
 npm i val-loader -D
 ```
 
@@ -57,13 +57,13 @@ npm i val-loader -D
 
 加载的模块必须使用以下函数接口，将 default export 导出为一个函数。
 
-```text
+```
 module.exports = function () {...};
 ```
 
 还支持 Babel 编译的模块
 
-```text
+```
 export default function () {...};
 ```
 
@@ -102,7 +102,7 @@ module.exports = {
 
 ### 安装
 
-```text
+```
 npm i url-loader -D
 ```
 
@@ -134,7 +134,7 @@ module.exports = {
 
 ### 安装
 
-```text
+```
 npm i file-loader -D
 ```
 

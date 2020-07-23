@@ -4,7 +4,7 @@ HtmlWebpackPlugin 简化了 HTML 文件的创建，以便为你的 webpack 包�
 
 ## 安装
 
-```text
+```
 npm i html-webpack-plugin -D
 ```
 

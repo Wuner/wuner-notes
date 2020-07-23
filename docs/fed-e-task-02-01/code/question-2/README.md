@@ -4,7 +4,7 @@
 
 gulpfile.js 使用 module.exports 导出了 build、dev、clean，所以我们可以通过 gulp 调用这三个任务
 
-```text
+```
 gulp build
 gulp dev
 gulp clean
@@ -60,7 +60,7 @@ const script = () => {
 
 `gulp-imagemin`插件内置了几个 git 上的插件，拉取极易失败；可以采取以下方法，将可 install 成功
 
-```text
+```
 C:\Windows\System32\drivers\etc\hosts
 找到上面路径的文件，进行编辑
 添加以下内容：

@@ -6,7 +6,7 @@
 
 ## 安装
 
-```text
+```
 npm i clean-webpack-plugin -D
 ```
 

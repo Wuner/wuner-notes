@@ -10,13 +10,13 @@
 
 将 plop 安装到你的项目
 
-```text
+```
 npm i plop -D
 ```
 
 将 plop 安装到全局
 
-```text
+```
 npm i plop -g
 ```
 
@@ -56,7 +56,7 @@ module.exports = (plop) => {
 
 创建 plop-templates/component.js.hbs
 
-```text
+```
 <template>
   <div class="{{name}}"></div>
 </template>
@@ -80,7 +80,7 @@ export default {
 
 创建 plop-templates/component.less.hbs
 
-```text
+```
 .{{name}} {
     position:absolute;
     width: 100%;

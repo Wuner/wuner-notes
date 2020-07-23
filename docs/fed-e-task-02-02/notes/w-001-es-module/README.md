@@ -13,7 +13,7 @@
 
 无论您是否声明，导出的模块都处于严格模式。 export 语句不能用在嵌入式脚本中。
 
-```text
+```
 // 导出单个特性
 export let name1, name2, …, nameN; // also var, const
 export let name1 = …, name2 = …, …, nameN; // also var, const
@@ -53,7 +53,7 @@ export { default } from …;
 
 在您希望按照一定的条件或者按需加载模块的时候，动态 import() 是非常有用的。而静态型的 import 是初始化加载依赖项的最优选择，使用静态 import 更容易从代码静态分析工具和 tree shaking 中受益。
 
-```text
+```
 // 导入整个模块的内容
 import * as myModule from '/modules/my-module.js';
 
@@ -207,7 +207,7 @@ Node v12 之后的版本，可以通过`package.json`中添加`type`字段为`mo
 
 对于早期的 Node.js 版本，可以使用 Babel 实现 ES Module 的兼容
 
-```text
+```
 // 配置：第一种方式
 {
   "plugins": [
