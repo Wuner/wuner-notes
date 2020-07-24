@@ -43,7 +43,7 @@ function simulateMemoryLeak() {
 
 这里以 Google 浏览器为例,使用 F12 开启调式，选择 Performance，点击 record（录制），进行页面操作，点击 stop 结束录制之后，开启内存勾选，拖动截图到指定时间段查看发生内存问题时候到页面展示，并定位问题。同时可以查看对应出现红点到执行脚本，定位问题代码。
 
-![note](img/1.png)
+![note](./img/1.png)
 
 ### 利用浏览器内存模块，查找分离 dom
 
@@ -69,7 +69,7 @@ function create() {
 }
 ```
 
-![note](img/2.png)
+![note](./img/2.png)
 
 ### 如何确定频繁对垃圾回收
 

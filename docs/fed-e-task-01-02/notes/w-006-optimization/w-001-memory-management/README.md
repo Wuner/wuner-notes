@@ -189,7 +189,7 @@ window.onload = function () {
 - 遍历所有对象清除没有标记的对象
 - 回收相应的空间
 
-![notes](img/1.png)
+![notes](./img/1.png)
 
 **循环引用不再是问题了**
 
@@ -209,7 +209,7 @@ window.onload = function () {
 
 - 当分配的内存小于现有连续的内存碎片，则可能会造成浪费。
 
-![notes](img/2.png)
+![notes](./img/2.png)
 
 ### 标记整理算法
 
@@ -219,4 +219,4 @@ window.onload = function () {
 - 标记阶段的操作和标记清除一致
 - 清除阶段会先执行整理，移动对象位置
 
-![notes](img/3.png)
+![notes](./img/3.png)
