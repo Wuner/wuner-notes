@@ -20,8 +20,9 @@ npm i husky lint-staged -D
 
 ### 配置
 
-1. husky
-   `package.json`
+- husky
+
+`package.json`
 
 ```json
 {
@@ -39,6 +40,33 @@ npm i husky lint-staged -D
     "hooks": {
       "pre-commit": "npm run lint"
     }
+  }
+}
+```
+
+- lint-stated and husky
+
+`package.json`
+
+```json
+{
+  "name": "wuner-notes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preCommit": "lint-staged",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run preCommit"
+    }
+  },
+  "lint-staged": {
+    "*.js": ["eslint", "prettier ."]
   }
 }
 ```
