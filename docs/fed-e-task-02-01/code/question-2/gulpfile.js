@@ -38,7 +38,7 @@ const font = () => {
     .pipe(dest('dist'));
 };
 
-const static = () => {
+const noBuild = () => {
   return src('public/**', { base: 'public' }).pipe(dest('dist')); // 无需编译的文件直接写入到目标目录
 };
 
@@ -107,7 +107,7 @@ const dev = series(clean, compile, serve);
 // 而image等任务互不干扰，我们使用异步组合任务
 const build = series(
   clean,
-  parallel(series(compile, useref), image, font, static),
+  parallel(series(compile, useref), image, font, noBuild),
 );
 
 module.exports = {

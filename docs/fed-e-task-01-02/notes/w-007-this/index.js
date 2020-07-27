@@ -5,6 +5,7 @@ console.log(this === global); // false
 
 this.b = 'Heath'; //
 console.log(module.exports.b); // "Heath"
+/* eslint no-undef: 0 */
 console.log(globalThis); // global
 
 function f1() {

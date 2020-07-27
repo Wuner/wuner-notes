@@ -1,5 +1,6 @@
 // 异步代码
 console.log(1);
+/* eslint no-undef: 0 */
 setTimeout(
   (a = () => {
     console.log(2);

@@ -1,3 +1,4 @@
+/* eslint no-redeclare: 0 */
 function varTest() {
   var x = 1;
   {

@@ -252,6 +252,7 @@ class Promise {
   static reject(value) {
     // 判断value是否是Promise对象，是则直接返回，否则创建Promise对象并返回
     if (value instanceof Promise) return value;
+    /* eslint no-shadow-restricted-names: 0 */
     return new Promise((undefined, reject) => reject(value));
   }
 

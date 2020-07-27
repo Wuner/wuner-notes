@@ -5,8 +5,20 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "preCommit": "lint-staged",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run preCommit"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "prettier ."
+    ]
   },
   "devDependencies": {
     "@babel/cli": "^7.10.4",
@@ -20,6 +32,8 @@
     "eslint-plugin-vue": "^6.2.2",
     "folktale": "^2.3.2",
     "html-webpack-plugin": "^4.3.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "lodash": "^4.17.15",
     "nodemon": "^2.0.4",
     "prettier": "^2.0.5",

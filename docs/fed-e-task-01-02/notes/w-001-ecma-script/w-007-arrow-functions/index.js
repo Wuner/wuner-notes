@@ -93,7 +93,7 @@ const adder = {
 
 console.log(adder.add(1)); // 输出 2
 console.log(adder.addThruCall(1)); // 仍然输出 2
-
+/* eslint no-undef: 0 */
 const foo = (...args) => {
   console.log(arguments[0]); // {}
   console.log(args); // [1,2]

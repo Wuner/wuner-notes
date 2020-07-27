@@ -16,7 +16,7 @@ function greeting(helloMessage, name) {
 greeting(sayHello, 'JavaScript!'); // Hello, JavaScript!
 
 // 函数可作为返回值
-function sayHello() {
+function sayHello1() {
   return function () {
     console.log('Hello!');
   };

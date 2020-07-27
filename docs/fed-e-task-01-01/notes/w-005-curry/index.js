@@ -44,6 +44,7 @@ console.log(findNumber(['ss12', 'sss']));
 
 // 模拟 curry
 const curry = (func) => {
+  /*eslint no-undef: 0 */
   return (curryFn = (...args) => {
     if (args.length < func.length) {
       return function () {

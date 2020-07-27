@@ -31,12 +31,13 @@ npm i husky lint-staged -D
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint **/*.js",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test"
+      "pre-commit": "npm run lint"
     }
   }
 }
