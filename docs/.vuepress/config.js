@@ -49,6 +49,25 @@ const dealWithFiles = (result) => {
           );
         }
         break;
+      case 4:
+        let children2 = files[files.length - 1].children;
+        let children3 = children2[children2.length - 1].children;
+        if (typeof children3[children3.length - 1] === 'string') {
+          files[files.length - 1].children[children2.length - 1].children[
+            children3.length - 1
+          ] = {
+            title: getTitle(children3[children3.length - 1]),
+            path: children3[children3.length - 1],
+            children: [value.path],
+            collapsable: true,
+            sidebarDepth: 2,
+          };
+        } else {
+          files[files.length - 1].children[children2.length - 1].children[
+            children3.length - 1
+          ].children.push(value.path);
+        }
+        break;
     }
   });
 
