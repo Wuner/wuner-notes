@@ -3,7 +3,7 @@
 ## 安装
 
 ```
-npm i eslint eslint-loader babel-eslint eslint-plugin-vue eslint-plugin-vue-libs -D
+npm i eslint eslint-loader -D
 ```
 
 ## 用法
