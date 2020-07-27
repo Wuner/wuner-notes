@@ -9,7 +9,6 @@ const getTitle = (srcPath) => {
   if (title.includes('[')) {
     title = title.substring(title.indexOf('[') + 1, title.indexOf(']'));
   }
-
   return title;
 };
 
