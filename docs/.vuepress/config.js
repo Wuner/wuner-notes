@@ -10,6 +10,7 @@ const getTitle = (srcPath) => {
     title = title.substring(title.indexOf('[') + 1, title.indexOf(']'));
   }
   dd;
+
   return title;
 };
 
