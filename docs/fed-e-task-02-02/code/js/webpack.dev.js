@@ -9,6 +9,7 @@ module.exports = merge(commonConfig, {
     path: path.join(__dirname, 'dist'),
   },
   mode: 'development',
+  devtool: 'eval-source-map',
   devServer: {
     // 当使用内联模式(inline mode)时，控制台(console)将显示消息，可能的值有 none, error, warning 或者 info（默认值）。
     clientLogLevel: 'none',

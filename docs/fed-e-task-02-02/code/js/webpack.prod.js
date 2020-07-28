@@ -12,6 +12,7 @@ module.exports = merge(commonConfig, {
     path: path.join(__dirname, 'dist'),
   },
   mode: 'production',
+  devtool: 'none',
   optimization: {
     minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
   },

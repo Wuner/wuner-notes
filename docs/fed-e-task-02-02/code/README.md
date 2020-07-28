@@ -464,6 +464,31 @@ module.exports = {
 };
 ```
 
+## Devtool
+
+具体配置请移步到[Devtool](../notes/w-002-webpack/w-007-dev-tool)笔记
+
+### 配置
+
+这里我们使用`eval-source-map`
+
+每个模块使用 eval() 执行，并且 source map 转换为 DataUrl 后添加到 eval() 中。初始化 source map 时比较慢，但是会在重新构建时提供比较快的速度，并且生成实际的文件。行数能够正确映射，因为会映射到原始代码中。它会生成用于开发环境的最佳品质的 source map。
+
+`webpack.config.js`
+
+```javascript
+const path = require('path');
+module.exports = {
+  entry: './src/main.js',
+  output: {
+    filename: 'bundle.[hash:8].js',
+    path: path.join(__dirname, 'dist'),
+  },
+  mode: 'production',
+  devtool: 'eval-source-map',
+};
+```
+
 ## `webpack.config.js`和`babel.config.js`完整示例
 
 `webpack.config.js`
@@ -485,6 +510,7 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
   },
   mode: 'production',
+  devtool: 'eval-source-map',
   optimization: {
     minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
   },
@@ -708,6 +734,7 @@ module.exports = merge(commonConfig, {
     path: path.join(__dirname, 'dist'),
   },
   mode: 'development',
+  devtool: 'eval-source-map',
   devServer: {
     // 当使用内联模式(inline mode)时，控制台(console)将显示消息，可能的值有 none, error, warning 或者 info（默认值）。
     clientLogLevel: 'none',
@@ -776,6 +803,7 @@ module.exports = merge(commonConfig, {
     path: path.join(__dirname, 'dist'),
   },
   mode: 'production',
+  devtool: 'none',
   optimization: {
     minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
   },
@@ -848,6 +876,7 @@ module.exports = merge(commonConfig, {
     path: path.join(__dirname, 'dist'),
   },
   mode: 'production',
+  devtool: 'none',
   optimization: {
     minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
   },
