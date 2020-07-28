@@ -1,6 +1,6 @@
 # 文件
 
-## [raw-loader](https://www.webpackjs.com/loaders/raw-loader/)
+## [raw-loader](https://www.webpack.js.org/loaders/raw-loader/)
 
 加载文件原始内容（utf-8）
 
@@ -41,7 +41,7 @@ webpack --module-bind 'txt=raw-loader'
 import txt from 'raw-loader!./assets/index.txt';
 ```
 
-## [val-loader](https://www.webpackjs.com/loaders/val-loader/)
+## [val-loader](https://www.webpack.js.org/loaders/val-loader/)
 
 将代码作为模块执行，并将 exports 转为 JS 代码
 
@@ -96,7 +96,7 @@ module.exports = {
 };
 ```
 
-## [url-loader](https://www.webpackjs.com/loaders/url-loader/)
+## [url-loader](https://www.webpack.js.org/loaders/url-loader/)
 
 将文件作为 base64 编码的 URL 加载
 
@@ -128,7 +128,7 @@ module.exports = {
 };
 ```
 
-## [file-loader](https://www.webpackjs.com/loaders/file-loader/)
+## [file-loader](https://www.webpack.js.org/loaders/file-loader/)
 
 将文件发送到输出文件夹，并返回（相对）URL
 

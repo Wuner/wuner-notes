@@ -1,4 +1,4 @@
-# [插件(plugins)](https://www.webpackjs.com/plugins/)
+# [插件(plugins)](https://www.webpack.js.org/plugins/)
 
 插件是 webpack 的[支柱](https://github.com/webpack/tapable)功能。webpack 自身也是构建于，你在 webpack 配置中用到的相同的插件系统之上！
 

@@ -24,7 +24,7 @@ module.exports = config;
 
 ## 多个入口起点
 
-如果配置创建了多个单独的 "chunk"（例如，使用多个入口起点或使用像 splitChuckPlugin ---> webpack 4.0 后提供 这样的插件），则应该使用[占位符(substitutions)](https://www.webpackjs.com/configuration/output/##output-filename)来确保每个文件具有唯一的名称。
+如果配置创建了多个单独的 "chunk"（例如，使用多个入口起点或使用像 splitChuckPlugin ---> webpack 4.0 后提供 这样的插件），则应该使用[占位符(substitutions)](https://www.webpackjs.com/configuration/output/#output-filename)来确保每个文件具有唯一的名称。
 
 ```javascript
 const config = {

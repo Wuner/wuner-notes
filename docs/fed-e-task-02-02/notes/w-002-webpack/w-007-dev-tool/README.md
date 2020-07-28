@@ -2,7 +2,7 @@
 
 此选项控制是否生成，以及如何生成[source map](https://blog.teamtreehouse.com/introduction-source-maps)
 
-使用 [SourceMapDevToolPlugin](https://www.webpackjs.com/plugins/source-map-dev-tool-plugin/) 进行更细粒度的配置。查看 [source-map-loader](https://www.webpackjs.com/loaders/source-map-loader/) 来处理已有的 source map。
+使用 [SourceMapDevToolPlugin](https://www.webpack.js.org/plugins/source-map-dev-tool-plugin/) 进行更细粒度的配置。查看 [source-map-loader](https://www.webpack.js.org/loaders/source-map-loader/) 来处理已有的 source map。
 
 ## devtool
 

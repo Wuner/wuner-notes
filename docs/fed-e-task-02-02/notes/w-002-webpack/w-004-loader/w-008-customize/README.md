@@ -1,4 +1,4 @@
-# Webpack [开发一个 Loader](https://www.webpackjs.com/contribute/writing-a-loader/)
+# Webpack [开发一个 Loader](https://www.webpack.js.org/contribute/writing-a-loader/)
 
 loader 是导出为一个函数的 node 模块。该函数在 loader 转换资源的时候调用。给定的函数将调用 loader API，并通过 this 上下文访问。
 

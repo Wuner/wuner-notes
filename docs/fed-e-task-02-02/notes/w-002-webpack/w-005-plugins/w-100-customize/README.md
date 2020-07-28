@@ -94,7 +94,7 @@ class HelloCompilationPlugin {
 }
 ```
 
-关于 compiler, compilation 的可用回调，和其它重要的对象的更多信息，请查看[插件](https://www.webpackjs.com/api/plugins/)文档。
+关于 compiler, compilation 的可用回调，和其它重要的对象的更多信息，请查看[插件](https://www.webpack.js.org/api/plugins/)文档。
 
 ## 异步编译插件
 

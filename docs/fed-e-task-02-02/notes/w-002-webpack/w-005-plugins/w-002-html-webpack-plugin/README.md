@@ -2,6 +2,8 @@
 
 HtmlWebpackPlugin 简化了 HTML 文件的创建，以便为你的 webpack 包提供服务。这对于在文件名中包含每次会随着编译而发生变化哈希的 webpack bundle 尤其有用。 你可以让插件为你生成一个 HTML 文件，使用 lodash 模板提供你自己的模板，或使用你自己的 loader。
 
+## [使用非 lodash 模板](https://github.com/jantimon/html-webpack-plugin/blob/master/docs/template-option.md)
+
 ## 安装
 
 ```

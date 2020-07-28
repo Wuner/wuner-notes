@@ -1,6 +1,6 @@
 # 样式
 
-## [style-loader](https://www.webpackjs.com/loaders/style-loader/)
+## [style-loader](https://www.webpack.js.org/loaders/style-loader/)
 
 将模块的导出作为样式添加到 DOM 中
 
@@ -27,7 +27,7 @@ const config = {
 };
 ```
 
-## [css-loader](https://www.webpackjs.com/loaders/css-loader/)
+## [css-loader](https://www.webpack.js.org/loaders/css-loader/)
 
 解析 CSS 文件后，使用 import 加载，并且返回 CSS 代码
 
@@ -54,7 +54,7 @@ const config = {
 };
 ```
 
-## [less-loader](https://www.webpackjs.com/loaders/less-loader/)
+## [less-loader](https://www.webpack.js.org/loaders/less-loader/)
 
 加载和转译 LESS 文件
 
@@ -89,7 +89,7 @@ const config = {
 };
 ```
 
-## [sass-loader](https://www.webpackjs.com/loaders/sass-loader/)
+## [sass-loader](https://www.webpack.js.org/loaders/sass-loader/)
 
 加载和转译 SASS/SCSS 文件
 
@@ -124,7 +124,7 @@ const config = {
 };
 ```
 
-## [postcss-loader](https://www.webpackjs.com/loaders/postcss-loader/)
+## [postcss-loader](https://www.webpack.js.org/loaders/postcss-loader/)
 
 使用 PostCSS 加载和转译 CSS/SSS 文件
 
