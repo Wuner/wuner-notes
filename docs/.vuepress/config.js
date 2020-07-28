@@ -131,6 +131,10 @@ module.exports = {
             text: '前端工程化(2)',
             link: '/fed-e-task-02-02/notes/',
           },
+          {
+            text: 'Vue.js 框架源码与进阶(1)',
+            link: '/fed-e-task-03-01/notes/',
+          },
         ],
       },
       {
@@ -151,6 +155,10 @@ module.exports = {
           {
             text: '前端工程化(2) 题目',
             link: '/fed-e-task-02-02/',
+          },
+          {
+            text: 'Vue.js 框架源码与进阶(1) 题目',
+            link: '/fed-e-task-03-01/',
           },
         ],
       },
