@@ -169,11 +169,13 @@ module.exports = {
       '/fed-e-task-01-02/notes/': getChildren('docs/fed-e-task-01-02/notes/'),
       '/fed-e-task-02-01/notes/': getChildren('docs/fed-e-task-02-01/notes/'),
       '/fed-e-task-02-02/notes/': getChildren('docs/fed-e-task-02-02/notes/'),
+      '/fed-e-task-03-01/notes/': getChildren('docs/fed-e-task-03-01/notes/'),
       // Questions
       '/fed-e-task-01-01/': getQuestionsChildren('/fed-e-task-01-01/'),
       '/fed-e-task-01-02/': getQuestionsChildren('/fed-e-task-01-02/'),
       '/fed-e-task-02-01/': getQuestionsChildren('/fed-e-task-02-01/'),
       '/fed-e-task-02-02/': getQuestionsChildren('/fed-e-task-02-02/'),
+      '/fed-e-task-03-01/': getQuestionsChildren('/fed-e-task-03-01/'),
     },
   },
 };
