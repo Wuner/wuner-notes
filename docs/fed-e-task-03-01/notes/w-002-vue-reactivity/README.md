@@ -591,7 +591,7 @@ class Compiler {
 }
 ```
 
-## Dep(Dependency)
+### Dep(Dependency)
 
 ![note](./imgs/6.png)
 
@@ -625,7 +625,7 @@ class Dep {
 }
 ```
 
-## Watcher
+### Watcher
 
 ![note](./imgs/8.png)
 
