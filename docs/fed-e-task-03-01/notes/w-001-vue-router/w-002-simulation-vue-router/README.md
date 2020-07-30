@@ -53,6 +53,8 @@ new Vue({
 
 ## install
 
+[混入 mixin ](https://cn.vuejs.org/v2/guide/mixins.html)
+
 ```javascript
 let _Vue = null;
 export default class VueRouter {

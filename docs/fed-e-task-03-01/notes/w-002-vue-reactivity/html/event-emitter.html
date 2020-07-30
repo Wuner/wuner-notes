@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <script>
+      /**
+       * @author Wuner
+       * @date 2020/7/29 21:58
+       * @description
+       */
+      class EventEmitter {
+        constructor() {
+          this.events = {};
+        }
+
+        // 订阅通知
+        $on(eventType, handle) {
+          this.events[eventType] = this.events[eventType] || [];
+          this.events[eventType].push(handle);
+        }
+
+        // 发布通知
+        $emit(eventType) {
+          if (this.events[eventType]) {
+            this.events[eventType].forEach((handle) => handle());
+          }
+        }
+      }
+
+      // 测试
+      let ev = new EventEmitter();
+      ev.$on('click', () => {
+        console.log('click1');
+      });
+      ev.$on('click', () => {
+        console.log('click2');
+      });
+      ev.$on('next', () => {
+        console.log('next');
+      });
+
+      ev.$emit('click');
+      ev.$emit('next');
+    </script>
+  </body>
+</html>

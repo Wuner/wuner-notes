@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <script>
+      const el = document.createElement('p');
+      el.textContent = '1231';
+      document.body.append(el);
+
+      let data = {
+        msg: '成功',
+        code: 1,
+      };
+      let vm = {};
+      Object.keys(data).forEach((key) => {
+        Object.defineProperty(vm, key, {
+          enumerable: true,
+          configurable: true,
+          get: () => {
+            console.log(`获取 ${key}==>${data[key]}`);
+            return data[key];
+          },
+          set: (val) => {
+            if (val === data[key]) {
+              return;
+            }
+            console.log(`赋值 ${key}==>${val}`);
+            data[key] = val;
+            document.getElementsByTagName('p')[0].textContent = val;
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

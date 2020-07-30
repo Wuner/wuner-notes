@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body></body>
+  <script>
+    const el = document.createElement('p');
+    el.textContent = '在控制台输入vm.msg = 123';
+    document.body.append(el);
+
+    let data = {
+      msg: '成功',
+      code: 0,
+    };
+    const vm = new Proxy(data, {
+      get(target, key) {
+        console.log(`获取${key}===>${target[key]}`);
+        return target[key];
+      },
+      set(target, key, value) {
+        if (target[key] === value) return;
+        console.log(`设置${key}===>${value}`);
+        target[key] = value;
+        document.getElementsByTagName('p')[0].textContent = value;
+      },
+    });
+  </script>
+</html>

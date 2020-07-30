@@ -111,6 +111,7 @@ module.exports = {
   description: 'the web study notes',
   base: '/wuner-notes/',
   themeConfig: {
+    sidebarDepth: 2,
     nav: [
       {
         text: 'Notes',

@@ -8,20 +8,20 @@ const bs = require('browser-sync');
 
 const data = require('./data');
 
-const page = () => {
-  return src('src/*html', { base: 'src' })
+const page = (filepath) => {
+  return src(filepath || 'src/*html', { base: 'src' })
     .pipe(plugins.swig({ data, defaults: { cache: false } })) // 编译html，并将数据对象中的变量注入模板，不缓存
     .pipe(dest('temp'));
 };
 
-const style = () => {
-  return src('src/assets/styles/*.scss', { base: 'src' })
+const style = (filepath) => {
+  return src(filepath || 'src/assets/styles/*.scss', { base: 'src' })
     .pipe(plugins.sass({ outputStyle: 'expanded' })) // 将scss转换为css
     .pipe(dest('temp'));
 };
 
-const script = () => {
-  return src('src/assets/scripts/*.js', { base: 'src' })
+const script = (filepath) => {
+  return src(filepath || 'src/assets/scripts/*.js', { base: 'src' })
     .pipe(plugins.babel({ presets: [require('@babel/preset-env')] })) // 提供babel将es6转换为es5
     .pipe(dest('temp'));
 };
@@ -87,9 +87,13 @@ const serve = () => {
   });
 
   // 监听文件变化，对其进行编译处理
-  watch('src/*.html', page);
-  watch('src/assets/styles/*.scss', style);
-  watch('src/assets/scripts/*.js', script);
+  // watch('src/*.html', page);
+  // watch('src/assets/styles/*.scss', style);
+  // watch('src/assets/scripts/*.js', script);
+  // 优化构建，按需构建
+  watch('src/*.html').on('change', (filepath) => page(filepath));
+  watch('src/assets/styles/*.scss').on('change', (filepath) => style(filepath));
+  watch('src/assets/scripts/*.js').on('change', (filepath) => script(filepath));
   watch(
     ['src/assets/fonts/**', 'src/assets/images/**', 'public/**'],
     bs.reload,

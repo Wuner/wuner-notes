@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Document</title>
+</head>
+<body>
+<script>
+  const el = document.createElement('p');
+  el.textContent = '在控制台输入vm.msg = 123'
+  document.body.append(el);
+
+  // 模拟Vue中的data选项
+  let data = {msg: 12};
+  // 模拟vue实例
+  let vm = {};
+  // 数据劫持：当访问或者设置 vm 中的成员的时候，做一些干预操作
+  Object.defineProperty(vm, 'msg', {
+    configurable: true,
+    enumerable: true,
+    // 当获取值的时候执行
+    get: () => {
+      console.log('获取');
+      return data.msg;
+    },
+    // 当赋值的时候执行
+    set: (val) => {
+      console.log('赋值msg ==> ', val);
+      if (val === data.msg) {
+        return;
+      }
+      data.msg = val;
+      // 数据更改，更新 DOM 的值
+      document.getElementsByTagName('p')[0].textContent = val;
+    },
+  });
+</script>
+</body>
+</html>
