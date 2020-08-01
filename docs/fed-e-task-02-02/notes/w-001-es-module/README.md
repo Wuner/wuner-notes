@@ -162,7 +162,7 @@ es-module.mjs
 // export const foo = 'es module export value'
 ```
 
-### 与 CommonJS 的差异
+### [与 CommonJS 的差异](https://es6.ruanyifeng.com/#docs/module-loader)
 
 esm.mjs
 
@@ -219,3 +219,5 @@ Node v12 之后的版本，可以通过`package.json`中添加`type`字段为`mo
 "presets":["@babel/preset-env"]
 }
 ```
+
+### [具体 Module 的语法](https://es6.ruanyifeng.com/#docs/module)
