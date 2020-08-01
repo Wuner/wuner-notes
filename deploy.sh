@@ -24,7 +24,7 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
- git push -f 'https://github.com/HeathHwn/wuner-notes.git' master:gh-pages
- git push -f 'https://ace2651947af621ab919d8c350b65e29@gitee.com/HeathHwn/wuner-notes.git' master:gh-pages
+ git push -f 'https://github.com/Wuner/wuner-notes.git' master:gh-pages
+ git push -f 'https://ace2651947af621ab919d8c350b65e29@gitee.com/Wuner/wuner-notes.git' master:gh-pages
 
 cd -
