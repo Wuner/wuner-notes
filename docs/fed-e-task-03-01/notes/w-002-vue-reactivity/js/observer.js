@@ -24,7 +24,7 @@ class Observer {
   defineReactive(data, key, val) {
     /*eslint no-undef:0*/
     let dep = new Dep();
-    // 如果val是对象，，继续设置它下面的成员为响应式数据
+    // 如果val是对象，继续设置它下面的成员为响应式数据
     this.walk(val);
     Object.defineProperty(data, key, {
       enumerable: true,

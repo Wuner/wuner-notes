@@ -11,6 +11,8 @@
       <h3>{{ code }}</h3>
       <h1>v-text</h1>
       <div v-text="msg"></div>
+      <div v-html="html"></div>
+      <div v-on:click="onClick">点击</div>
       <h1>v-model</h1>
       <input type="text" v-model="msg" />
       <input type="text" v-model="code" />
@@ -27,8 +29,14 @@
       data: {
         msg: 'success',
         code: 1,
+        html: '<p>来来来</p>',
         data: {
           name: '',
+        },
+      },
+      methods: {
+        onClick() {
+          console.log('点击了');
         },
       },
     });

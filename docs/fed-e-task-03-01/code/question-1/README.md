@@ -1,3 +1,10 @@
+# 编程第一题
+
+模拟 VueRouter 的 hash 模式的实现，实现思路和 History 模式类似，把 URL 中的 # 后面的内容作为路由的地址，可以通过 hashchange 事件监听路由地址的变化。
+
+[源码地址](https://gitee.com/Wuner/wuner-notes/blob/master/docs/fed-e-task-03-01/notes/w-001-vue-router/w-002-simulation-vue-router/js/index.js)
+
+```javascript
 let _Vue = null;
 export default class VueRouter {
   static install(Vue) {
@@ -134,3 +141,4 @@ export default class VueRouter {
     });
   }
 }
+```
