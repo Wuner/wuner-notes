@@ -4,7 +4,7 @@
 
 ![note](../../imgs/2.png)
 
-[源码地址]()
+[源码地址](https://gitee.com/Wuner/wuner-notes/blob/master/docs/fed-e-task-03-01/code/question-3/js/index.js)
 
 ```javascript
 /**
