@@ -226,10 +226,3 @@ export NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node
 export NVM_NODEJS_ORG_MIRROR=$NODEJS_ORG_MIRROR
 # export NVM_IOJS_ORG_MIRROR=$IOJS_ORG_MIRROR
 ```
-
-## 前端工程化梳理
-
-- 脚手架 创建 项目
-- 自动化 构建 项目
-- 模块化 组织 项目
-- 规范化 标准 项目
