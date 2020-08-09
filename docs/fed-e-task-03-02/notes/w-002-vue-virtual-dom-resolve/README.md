@@ -765,4 +765,4 @@ function patchVnode(oldVnode, vnode, insertedVnodeQueue, removeOnly) {
 
 ### 总结
 
-![note](imgs/1.png)
+![note](./imgs/1.png)
