@@ -30,7 +30,7 @@
 
 这款小型脚手架工具，提供了 PC 端与移动端的开发模板；提供了 css 预处理器；提供了 gulp 自动化构建
 
-## [项目 git 仓库](https://gitee.com/HeathHwn/node-wuner)
+## [项目 git 仓库](https://gitee.com/wuner/node-wuner)
 
 ## 脚手架安装
 

@@ -12,7 +12,7 @@
 
 > 你可以直接使用 SourceMapDevToolPlugin/EvalSourceMapDevToolPlugin 来替代使用 devtool 选项，因为它有更多的选项。切勿同时使用 devtool 选项和 SourceMapDevToolPlugin/EvalSourceMapDevToolPlugin 插件。devtool 选项在内部添加过这些插件，所以你最终将应用两次插件。
 
-[git 仓库](https://github.com/HeathHwn/webpack-source-map) 里有用于测试 Source Map 示例，便于理解下面的 Source Map 对比表格
+[git 仓库](https://github.com/wuner/webpack-source-map) 里有用于测试 Source Map 示例，便于理解下面的 Source Map 对比表格
 
 | devtool                        | 构建速度 | 重新构建速度 | 生产环境 | 质量(quality)          |
 | ------------------------------ | -------- | ------------ | -------- | ---------------------- |

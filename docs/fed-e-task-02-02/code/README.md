@@ -926,4 +926,4 @@ npm run build
 npm run lint
 ```
 
-## [配置文件传送门](https://gitee.com/HeathHwn/wuner-notes/tree/master/docs/fed-e-task-02-02/code/js)
+## [配置文件传送门](https://gitee.com/wuner/wuner-notes/tree/master/docs/fed-e-task-02-02/code/js)
