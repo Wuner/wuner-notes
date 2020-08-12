@@ -189,4 +189,33 @@ module.exports = {
       '/fed-e-task-03-02/': getQuestionsChildren('/fed-e-task-03-02/'),
     },
   },
+  plugins: [
+    [
+      'copyright',
+      {
+        authorName: {
+          'en-US': 'Wuner',
+          'zh-CN': 'Wuner',
+        },
+      },
+    ],
+    [
+      'vuepress-plugin-medium-zoom',
+      {
+        selector: 'img',
+        options: {
+          background: 'rgba(0,0,0,0.7)',
+          scrollOffset: 0,
+        },
+      },
+    ],
+    [
+      'vuepress-plugin-code-copy',
+      {
+        align: 'top',
+        successText: '已复制',
+        color: '#fff',
+      },
+    ],
+  ],
 };

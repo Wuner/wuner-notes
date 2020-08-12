@@ -458,7 +458,7 @@ class Observer {
 
 | 常量                             | 值  | 描述                                                                            |
 | -------------------------------- | --- | ------------------------------------------------------------------------------- |
-| Node.ELEMENT_NODE                | 1   | 一个 元素 节点，例如 <p> 和 <div>。                                             |
+| Node.ELEMENT_NODE                | 1   | 一个 元素 节点，例如 `<p>` 和 `<div>`。                                         |
 | Node.TEXT_NODE                   | 3   | Element 或者 Attr 中实际的 文字                                                 |
 | Node.CDATA_SECTION_NODE          | 4   | 一个 CDATASection，例如 <!CDATA[[ … ]]>。                                       |
 | Node.PROCESSING_INSTRUCTION_NODE | 7   | 一个用于 XML 文档的 ProcessingInstruction ，例如 <?xml-stylesheet ... ?> 声明。 |
@@ -467,6 +467,7 @@ class Observer {
 | Node.DOCUMENT_TYPE_NODE          | 10  | 描述文档类型的 DocumentType 节点。例如 <!DOCTYPE html> 就是用于 HTML5 的。      |
 | Node.DOCUMENT_FRAGMENT_NODE      | 11  | 一个 DocumentFragment 节点                                                      |
 
+::: warning
 已弃用的节点类型常量
 
 | 常量                       | 值  | 描述                                                               |
@@ -475,6 +476,8 @@ class Observer {
 | Node.ENTITY_REFERENCE_NODE | 5   | 一个 XML 实体引用节点。 在 DOM4 规范里被移除。                     |
 | Node.ENTITY_NODE           | 6   | 一个 XML <!ENTITY ...> 节点。 在 DOM4 规范中被移除。               |
 | Node.NOTATION_NODE         | 12  | 一个 XML <!NOTATION ...> 节点。 在 DOM4 规范里被移除.              |
+
+:::
 
 ```javascript
 /**
