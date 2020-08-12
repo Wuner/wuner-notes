@@ -1,5 +1,25 @@
 # Webpack 构建 Vue 项目
 
+## 项目结构
+
+```
+└───vue/..........................项目目录
+    ├───src/......................src目录
+    │   └───assets/...............资源目录
+    │   └───components/...........组件目录
+    │   └───App.vue
+    │   └───main.js
+    └───public/...................无需编译的静态资源目录
+    │   └───index.html
+    └───.eslintrc.js..............eslint配置文件
+    └───babel.config.js...........babel配置文件
+    └───package.json..............模块包配置文件
+    └───webpack.common.js.........webpack配置文件(公共部分)
+    └───webpack.dev.js............webpack配置文件(测试环境部分)
+    └───webpack.prod.js...........webpack配置文件(生产环境部分)
+    └───webpack.config.js.........webpack配置文件(未拆分)
+```
+
 ## 安装 webpack 和 webpack-cli
 
 ```
