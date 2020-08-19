@@ -18,5 +18,7 @@ features:
     details: 带你了解VueRouter的简单使用，以及模拟VueRouter的实现；带你了解响应式原理，以及Vue响应式原理模拟实现；带你了解虚拟 DOM（Virtual DOM）—— Snabbdom 的使用以及源码解析。
   - title: Vue.js 源码分析
     details: Vue2.x 源码剖析之响应式原理；Vue2.x 源码剖析之虚拟 DOM；Vue2.x 源码剖析之模板编译
+  - title: Vuex 数据流管理及Vue.js 服务端渲染（SSR）
+    details: 本模块会介绍关于复杂项目中的状态管理方案 Vuex，以及自己来手写一个自己的 Vuex。Vue.js 中服务端渲染的使用尽在这里，本模块会先告诉你为什么要使用 SSR，紧接着带你使用 SSR 框架 Nuxt.js 快速开发一个服务端渲染的项目。
 footer: MIT Licensed | Copyright © 2020-present Wuner
 ---

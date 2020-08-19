@@ -140,6 +140,10 @@ module.exports = {
             text: 'Vue.js 框架源码与进阶(2)',
             link: '/fed-e-task-03-02/notes/',
           },
+          {
+            text: 'Vue.js 框架源码与进阶(3)',
+            link: '/fed-e-task-03-03/notes/',
+          },
         ],
       },
       {
@@ -169,6 +173,10 @@ module.exports = {
             text: 'Vue.js 框架源码与进阶(2) 题目',
             link: '/fed-e-task-03-02/',
           },
+          {
+            text: 'Vue.js 框架源码与进阶(3) 题目',
+            link: '/fed-e-task-03-03/',
+          },
         ],
       },
     ],
@@ -180,6 +188,7 @@ module.exports = {
       '/fed-e-task-02-02/notes/': getChildren('docs/fed-e-task-02-02/notes/'),
       '/fed-e-task-03-01/notes/': getChildren('docs/fed-e-task-03-01/notes/'),
       '/fed-e-task-03-02/notes/': getChildren('docs/fed-e-task-03-02/notes/'),
+      '/fed-e-task-03-03/notes/': getChildren('docs/fed-e-task-03-03/notes/'),
       // Questions
       '/fed-e-task-01-01/': getQuestionsChildren('/fed-e-task-01-01/'),
       '/fed-e-task-01-02/': getQuestionsChildren('/fed-e-task-01-02/'),
@@ -187,6 +196,7 @@ module.exports = {
       '/fed-e-task-02-02/': getQuestionsChildren('/fed-e-task-02-02/'),
       '/fed-e-task-03-01/': getQuestionsChildren('/fed-e-task-03-01/'),
       '/fed-e-task-03-02/': getQuestionsChildren('/fed-e-task-03-02/'),
+      '/fed-e-task-03-03/': getQuestionsChildren('/fed-e-task-03-03/'),
     },
   },
   plugins: [

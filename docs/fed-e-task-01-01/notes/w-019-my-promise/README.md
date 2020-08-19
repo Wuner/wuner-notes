@@ -1,4 +1,4 @@
-# Promise
+# 模拟 Promise
 
 ## 描述
 
