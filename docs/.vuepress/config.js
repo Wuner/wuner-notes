@@ -86,7 +86,7 @@ const getChildren = (srcPath) => dealWithFiles(readDirSync(srcPath));
 const readDirSync = (dirPath, leave = 0) => {
   let result = [];
   const files = fs.readdirSync(dirPath);
-  files.forEach(function (file, index) {
+  files.forEach(function (file) {
     let leaveTe = leave;
     const info = fs.statSync(path.join(dirPath, file));
     if (info.isDirectory()) {
@@ -110,6 +110,7 @@ module.exports = {
   title: 'Study Notes',
   description: 'the web study notes',
   base: '/wuner-notes/',
+  publicPath: './',
   themeConfig: {
     sidebarDepth: 2,
     nav: [
