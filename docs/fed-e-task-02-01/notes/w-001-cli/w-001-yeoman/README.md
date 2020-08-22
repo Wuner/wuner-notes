@@ -309,7 +309,7 @@ Yeoman 在覆盖用户文件时非常小心。 基本上，在预先存在的文
 
 然后，在将内容作为模板处理时，我们使用[copyTpl](https://github.com/sboudrias/mem-fs-editor#copytplfrom-to-context-templateoptions--copyoptions)方法复制文件。`copyTpl` 使用 [ejs 模板语法](https://ejs.co/)。
 
-```
+```javascript
 class extends Generator {
   writing() {
     this.fs.copyTpl(
@@ -323,22 +323,27 @@ class extends Generator {
 
 一种非常常见的情况是在提示阶段存储用户输入，并将其用于模板：
 
-```
-class extends Generator {
+```javascript
+const Generator = require('yeoman-generator');
+module.exports = class extends Generator {
   async prompting() {
-    this.answers = await this.prompt([{
-      type    : 'input',
-      name    : 'title',
-      message : 'Your project title',
-    }]);
+    this.answers = await this.prompt({
+      type: 'input',
+      name: 'title',
+      message: 'your project title',
+      default: this.appname,
+    });
   }
-
+  // Yeoman 自动在生成文件阶段调用次方法
   writing() {
+    // Generator将文件写入本地的方法
+    // 调用Generator的fs中的write方法来写入文件  第一个参数为写入的绝对路径，第二个参数为写入内容
+    // this.fs.write(this.destinationPath('temp.txt'), '1231');
     this.fs.copyTpl(
       this.templatePath('index.html'),
       this.destinationPath('public/index.html'),
-      { title: this.answers.title } // user answer `title` used
+      { Title: this.answers.title },
     );
   }
-}
+};
 ```
