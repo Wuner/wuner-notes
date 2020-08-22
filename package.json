@@ -5,21 +5,8 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preCommit": "lint-staged",
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
-    "release": "sh deploy.sh"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run release"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint",
-      "prettier ."
-    ]
+    "build": "vuepress build docs"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.4",
@@ -33,11 +20,11 @@
     "eslint-plugin-vue": "^6.2.2",
     "folktale": "^2.3.2",
     "html-webpack-plugin": "^4.3.0",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.11",
     "lodash": "^4.17.15",
     "nodemon": "^2.0.4",
     "prettier": "^2.0.5",
+    "shelljs": "^0.8.4",
+    "signale": "^1.4.0",
     "ts-node": "^8.10.2",
     "vuepress": "^1.5.2",
     "vuepress-plugin-code-copy": "^1.0.6",
