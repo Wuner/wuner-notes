@@ -7,11 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "preCommit": "lint-staged",
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "release": "sh deploy.sh"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run preCommit"
+      "pre-push": "npm run release"
     }
   },
   "lint-staged": {
