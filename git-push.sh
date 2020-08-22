@@ -7,7 +7,7 @@ echo "Enter COMMIT TEXT(输入提交提示语): "
 read TEXT
 
 git add -A
-git commit -m $TEXT
+git commit -m "$TEXT"
 
 # 如果发布到 https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
