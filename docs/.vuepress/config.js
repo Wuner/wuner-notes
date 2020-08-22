@@ -110,7 +110,6 @@ module.exports = {
   title: 'Study Notes',
   description: 'the web study notes',
   base: '/wuner-notes/',
-  publicPath: './',
   themeConfig: {
     sidebarDepth: 2,
     nav: [

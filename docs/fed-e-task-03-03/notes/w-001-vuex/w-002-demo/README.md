@@ -8,7 +8,7 @@
 
 ## 效果展示
 
-<video src="./videos/1.mp4" width="260px" height="auto" controls="controls" muted="false"></video>
+![note](./imgs/2.gif)
 
 ### 功能介绍
 
