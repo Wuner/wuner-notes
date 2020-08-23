@@ -26,7 +26,7 @@ const dealWithFiles = (result) => {
             title: getTitle(files[files.length - 1]),
             path: files[files.length - 1],
             children: [value.path],
-            collapsable: false,
+            collapsable: true,
             sidebarDepth: 2,
           };
         } else {
@@ -106,13 +106,60 @@ const readDirSync = (dirPath, leave = 0) => {
   return result;
 };
 
+const keywords = [
+  'Study Notes',
+  'Wuner',
+  'Vue',
+  '前端学习笔记',
+  '函数式编程',
+  'Promise',
+  'ES6+',
+  'TypeScript',
+  'JS性能优化',
+  'cli',
+  '脚手架',
+  '自动化构建',
+  'yeoman',
+  'plop',
+  'gulp',
+  'grunt',
+  'ESModule',
+  'webpack',
+  'rollup',
+  'lint',
+  'vue-router',
+  'vue-observe',
+  'virtual-dom',
+  '虚拟dom',
+  'vue源码解析',
+  'vue响应式原理',
+  'vue虚拟dom',
+  'vue模板编译',
+  'vue组件化',
+  'vue状态管理(vuex)',
+  '服务端渲染(ssr)',
+];
+
 module.exports = {
   title: 'Study Notes',
   description: 'the web study notes',
+  head: [
+    [
+      'meta',
+      {
+        name: 'keywords',
+        content: keywords.join(','),
+      },
+    ],
+  ],
   base: '/wuner-notes/',
   themeConfig: {
     sidebarDepth: 2,
     nav: [
+      {
+        text: 'Blog',
+        link: 'https://blog.csdn.net/qq_32090185',
+      },
       {
         text: 'Notes',
         items: [
@@ -228,4 +275,5 @@ module.exports = {
       },
     ],
   ],
+  markdown: { lineNumbers: true, extractHeaders: ['h2', 'h3', 'h4'] },
 };

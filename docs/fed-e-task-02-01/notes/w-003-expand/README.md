@@ -83,7 +83,7 @@ Node.js
 
 包管理工具
 
-yarn.lock / package-lock.json
+`yarn.lock / package-lock.json`
 
 yarn / npx
 
@@ -127,15 +127,15 @@ macOS
 - echo \$PATH
 - which xxx 找到这个命令所在的路径
 
-### yarn <cli-name> / npx <cli-name>
+### `yarn <cli-name>` 或者 `npx <cli-name>`
 
 Node CLI 类型的模块都会提供了一个或多个 CLI 程序，所以本地安装完这些过后，在项目的 node_modules 下的 .bin 目录里就会多出一个或者多个可执行文件。后续我们可以直接通过命令去使用这个 CLI 程序。
 
 当然了，通过前面的介绍你应该了解过，对于 node_modules 下 .bin 目录里的可执行文件，我们可以通过 npx 或者 yarn 命令快速找到，不必使用完整的路径去访问。
 
-那如果你使用的是 yarn，你就可以直接执行 yarn <cli-name>，这样的话 yarn 会自动找到 bin 目录下的 <cli-name> 文件。
+那如果你使用的是 yarn，你就可以直接执行 yarn `<cli-name>`，这样的话 yarn 会自动找到 bin 目录下的 `<cli-name>` 文件。
 
-我这里使用的是 npm 工具，所以我需要使用 npx <cli-name>。注意这里是 npx 命令，而不是 npm。
+我这里使用的是 npm 工具，所以我需要使用 `npx <cli-name>`。注意这里是 npx 命令，而不是 npm。
 
 npx 是 npm 最新版本中集成的一个工具，也就是说你只要安装了最新版的 npm 工具，你就可以直接使用 npx 命令。
 
