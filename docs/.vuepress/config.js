@@ -154,6 +154,10 @@ module.exports = {
   ],
   base: '/wuner-notes/',
   themeConfig: {
+    algolia: {
+      apiKey: 'aac02626df262080e66689b38d46091b',
+      indexName: 'wuner-notes',
+    },
     sidebarDepth: 2,
     nav: [
       {
