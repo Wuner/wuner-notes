@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo.png
 title: a
-actionText: start →
+actionText: 开始 →
 actionLink: /fed-e-task-01-01/notes/
 features:
   - title: 函数式编程与 JS 异步编程、手写 Promise

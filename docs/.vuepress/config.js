@@ -2,15 +2,15 @@ const fs = require('fs');
 const path = require('path');
 
 const getTitle = (srcPath) => {
-  let title = fs
+  let contentList = fs
     .readFileSync(path.join('docs', srcPath, 'README.md'), 'utf-8')
-    .split('\n')[0]
-    .replace('# ', '');
+    .split('\n');
+  let title = contentList[0].replace('# ', '');
   if (title.includes('[')) {
     title = title.substring(title.indexOf('[') + 1, title.indexOf(']'));
   }
-
-  return title;
+  console.log(srcPath, contentList.length);
+  return { title, isLink: contentList.length > 1 };
 };
 
 const dealWithFiles = (result) => {
@@ -22,9 +22,10 @@ const dealWithFiles = (result) => {
         break;
       case 2:
         if (typeof files[files.length - 1] === 'string') {
+          let titleObj = getTitle(files[files.length - 1]);
           files[files.length - 1] = {
-            title: getTitle(files[files.length - 1]),
-            path: files[files.length - 1],
+            title: titleObj.title,
+            path: titleObj.isLink ? files[files.length - 1] : undefined,
             children: [value.path],
             collapsable: true,
             sidebarDepth: 2,
@@ -36,9 +37,10 @@ const dealWithFiles = (result) => {
       case 3:
         let children = files[files.length - 1].children;
         if (typeof children[children.length - 1] === 'string') {
+          let titleObj = getTitle(children[children.length - 1]);
           files[files.length - 1].children[children.length - 1] = {
-            title: getTitle(children[children.length - 1]),
-            path: children[children.length - 1],
+            title: titleObj.title,
+            path: titleObj.isLink ? children[children.length - 1] : undefined,
             children: [value.path],
             collapsable: true,
             sidebarDepth: 2,
@@ -53,11 +55,12 @@ const dealWithFiles = (result) => {
         let children2 = files[files.length - 1].children;
         let children3 = children2[children2.length - 1].children;
         if (typeof children3[children3.length - 1] === 'string') {
+          let titleObj = getTitle(children3[children3.length - 1]);
           files[files.length - 1].children[children2.length - 1].children[
             children3.length - 1
           ] = {
-            title: getTitle(children3[children3.length - 1]),
-            path: children3[children3.length - 1],
+            title: titleObj.title,
+            path: titleObj.isLink ? children3[children3.length - 1] : undefined,
             children: [value.path],
             collapsable: true,
             sidebarDepth: 2,
@@ -140,9 +143,50 @@ const keywords = [
   '服务端渲染(ssr)',
 ];
 
+const items = [
+  {
+    text: 'JavaScript 深度剖析(1)',
+    link: '/fed-e-task-01-01/notes/',
+  },
+  {
+    text: 'JavaScript 深度剖析(2)',
+    link: '/fed-e-task-01-02/notes/',
+  },
+  {
+    text: '前端工程化(1)',
+    link: '/fed-e-task-02-01/notes/',
+  },
+  {
+    text: '前端工程化(2)',
+    link: '/fed-e-task-02-02/notes/',
+  },
+  {
+    text: 'Vue.js 框架源码与进阶(1)',
+    link: '/fed-e-task-03-01/notes/',
+  },
+  {
+    text: 'Vue.js 框架源码与进阶(2)',
+    link: '/fed-e-task-03-02/notes/',
+  },
+  {
+    text: 'Vue.js 框架源码与进阶(3)',
+    link: '/fed-e-task-03-03/notes/',
+  },
+];
+
+const createSidebar = () => {
+  let obj = {};
+  for (let item of items) {
+    let qLink = item.link.replace('notes/', '');
+    obj[item.link] = getChildren(`docs${item.link}`);
+    obj[qLink] = getQuestionsChildren(qLink);
+  }
+  return obj;
+};
+
 module.exports = {
   title: 'Study Notes',
-  description: 'the web study notes',
+  description: '大前端学习笔记',
   head: [
     [
       'meta',
@@ -157,98 +201,32 @@ module.exports = {
     algolia: {
       apiKey: 'aac02626df262080e66689b38d46091b',
       indexName: 'wuner-notes',
+      algoliaOptions: {
+        hitsPerPage: 10,
+      },
     },
     sidebarDepth: 2,
     nav: [
       {
-        text: 'Blog',
+        text: '博客',
         link: 'https://blog.csdn.net/qq_32090185',
       },
       {
-        text: 'Notes',
-        items: [
-          {
-            text: 'JavaScript 深度剖析(1)',
-            link: '/fed-e-task-01-01/notes/',
-          },
-          {
-            text: 'JavaScript 深度剖析(2)',
-            link: '/fed-e-task-01-02/notes/',
-          },
-          {
-            text: '前端工程化(1)',
-            link: '/fed-e-task-02-01/notes/',
-          },
-          {
-            text: '前端工程化(2)',
-            link: '/fed-e-task-02-02/notes/',
-          },
-          {
-            text: 'Vue.js 框架源码与进阶(1)',
-            link: '/fed-e-task-03-01/notes/',
-          },
-          {
-            text: 'Vue.js 框架源码与进阶(2)',
-            link: '/fed-e-task-03-02/notes/',
-          },
-          {
-            text: 'Vue.js 框架源码与进阶(3)',
-            link: '/fed-e-task-03-03/notes/',
-          },
-        ],
+        text: '笔记',
+        items,
       },
       {
-        text: 'Questions',
-        items: [
-          {
-            text: 'JavaScript 深度剖析(1) 题目',
-            link: '/fed-e-task-01-01/',
-          },
-          {
-            text: 'JavaScript 深度剖析(2) 题目',
-            link: '/fed-e-task-01-02/',
-          },
-          {
-            text: '前端工程化(1) 题目',
-            link: '/fed-e-task-02-01/',
-          },
-          {
-            text: '前端工程化(2) 题目',
-            link: '/fed-e-task-02-02/',
-          },
-          {
-            text: 'Vue.js 框架源码与进阶(1) 题目',
-            link: '/fed-e-task-03-01/',
-          },
-          {
-            text: 'Vue.js 框架源码与进阶(2) 题目',
-            link: '/fed-e-task-03-02/',
-          },
-          {
-            text: 'Vue.js 框架源码与进阶(3) 题目',
-            link: '/fed-e-task-03-03/',
-          },
-        ],
+        text: '题目',
+        items: items.map((value) => {
+          value.link.replace('notes/', '');
+          return value;
+        }),
       },
+      { text: '面试题', link: '/interview-questions/vue/' },
     ],
-    sidebar: {
-      // notes
-      '/fed-e-task-01-01/notes/': getChildren('docs/fed-e-task-01-01/notes/'),
-      '/fed-e-task-01-02/notes/': getChildren('docs/fed-e-task-01-02/notes/'),
-      '/fed-e-task-02-01/notes/': getChildren('docs/fed-e-task-02-01/notes/'),
-      '/fed-e-task-02-02/notes/': getChildren('docs/fed-e-task-02-02/notes/'),
-      '/fed-e-task-03-01/notes/': getChildren('docs/fed-e-task-03-01/notes/'),
-      '/fed-e-task-03-02/notes/': getChildren('docs/fed-e-task-03-02/notes/'),
-      '/fed-e-task-03-03/notes/': getChildren('docs/fed-e-task-03-03/notes/'),
-      // Questions
-      '/fed-e-task-01-01/': getQuestionsChildren('/fed-e-task-01-01/'),
-      '/fed-e-task-01-02/': getQuestionsChildren('/fed-e-task-01-02/'),
-      '/fed-e-task-02-01/': getQuestionsChildren('/fed-e-task-02-01/'),
-      '/fed-e-task-02-02/': getQuestionsChildren('/fed-e-task-02-02/'),
-      '/fed-e-task-03-01/': getQuestionsChildren('/fed-e-task-03-01/'),
-      '/fed-e-task-03-02/': getQuestionsChildren('/fed-e-task-03-02/'),
-      '/fed-e-task-03-03/': getQuestionsChildren('/fed-e-task-03-03/'),
-    },
+    sidebar: Object.assign({}, createSidebar(), {
+      '/interview-questions/': getChildren('docs/interview-questions/'),
+    }),
   },
   plugins: [
     [
@@ -258,6 +236,11 @@ module.exports = {
           'en-US': 'Wuner',
           'zh-CN': 'Wuner',
         },
+        minLength: 20,
+        clipboardComponent: path.resolve(
+          __dirname,
+          'components/ClipboardComponent.vue',
+        ),
       },
     ],
     [
