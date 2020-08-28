@@ -6,7 +6,7 @@
 
 ## 全局环境
 
-论是否在严格模式下，在全局执行环境中（在任何函数体外部）this 都指向全局对象。
+无论是否在严格模式下，在全局执行环境中（在任何函数体外部）this 都指向全局对象。
 
 ```javascript
 // 在浏览器中, window 对象同时也是全局对象：
@@ -114,7 +114,7 @@ ECMAScript 5 引入了 Function.prototype.bind()。调用 f.bind(someObject)会�
 
 ```javascript
 function f() {
-  return this;
+  return this.a;
 }
 
 let g = f.bind({ a: 'heath' });
@@ -129,7 +129,7 @@ console.log(oBind.a, oBind.f(), oBind.g(), oBind.h()); // 37, 37, heath, heath
 
 > 箭头函数
 
-在箭头函数中，this 与封闭词法环境的 this 保持一致。在全局代码中，它将被设置为全局对象：
+在箭头函数中（其本身不存在 this），this 与封闭词法环境的 this 保持一致。在全局代码中，它将被设置为全局对象：
 
 ```javascript
 let globalObject = this;
@@ -142,9 +142,10 @@ let globalObject = this;
 let foo = () => this;
 console.log(foo() === globalObject); // true
 // 作为对象的一个方法调用
-let obj1 = { foo: foo };
-console.log(obj1.foo() === globalObject); // true
+let obj = { foo: foo };
+console.log(obj.foo() === globalObject); // true
 
+let obj1 = { a: 12 };
 // 尝试使用apply来设定this
 console.log(foo.apply(obj1) === globalObject); // true
 
@@ -205,7 +206,7 @@ let obj3 = {
 console.log(obj3.f()); // 37
 ```
 
-请注意，这样的行为，根本不受函数定义方式或位置的影响。在前面的例子中，我们在定义对象 o 的同时，将函数内联定义为成员 f 。但是，我们也可以先定义函数，然后再将其附属到 o.f。这样做会导致相同的行为：
+请注意，这样的行为，根本不受函数定义方式或位置的影响。在前面的例子中，我们在定义对象 obj4 的同时，将函数内联定义为成员 f 。但是，我们也可以先定义函数，然后再将其附属到 obj4.f。这样做会导致相同的行为：
 
 ```javascript
 let obj4 = { prop: 37 };
@@ -221,7 +222,7 @@ console.log(obj4.f()); // 37
 
 这表明函数是从 obj4 的 f 成员调用的才是重点。
 
-同样，this 的绑定只受最靠近的成员引用的影响。在下面的这个例子中，我们把一个方法 g 当作对象 o.b 的函数调用。在这次执行期间，函数中的 this 将指向 o.b。事实证明，这与他是对象 o 的成员没有多大关系，最靠近的引用才是最重要的。
+同样，this 的绑定只受最靠近的成员引用的影响。在下面的这个例子中，我们把一个方法 g 当作对象 obj5.b 的函数调用。在这次执行期间，函数中的 this 将指向 obj5.b。事实证明，这与他是对象 obj5 的成员没有多大关系，最靠近的引用才是最重要的。
 
 ```javascript
 let obj5 = {};

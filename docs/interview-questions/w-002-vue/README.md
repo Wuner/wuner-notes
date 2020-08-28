@@ -1,4 +1,4 @@
-# Vue 面试题
+# Vue
 
 ## 面试的套路
 
@@ -173,7 +173,7 @@ function data () {
 const data1 = data()
 const data2 = data()
 
-data1 === data2
+console.log(data1 === data2) // false
 ```
 
 ## Vue 中事件绑定原理

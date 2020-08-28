@@ -9,7 +9,6 @@ const getTitle = (srcPath) => {
   if (title.includes('[')) {
     title = title.substring(title.indexOf('[') + 1, title.indexOf(']'));
   }
-  console.log(srcPath, contentList.length);
   return { title, isLink: contentList.length > 1 };
 };
 
@@ -217,9 +216,9 @@ module.exports = {
       },
       {
         text: '题目',
-        items: items.map((value) => {
-          value.link.replace('notes/', '');
-          return value;
+        items: items.map(({ text, link }) => {
+          link = link.replace('notes/', '');
+          return { text, link };
         }),
       },
       { text: '面试题', link: '/interview-questions/vue/' },
