@@ -140,6 +140,8 @@ const keywords = [
   'vue组件化',
   'vue状态管理(vuex)',
   '服务端渲染(ssr)',
+  'nuxtJs',
+  '搭建SSR',
 ];
 
 const items = [
@@ -170,6 +172,10 @@ const items = [
   {
     text: 'Vue.js 框架源码与进阶(3)',
     link: '/fed-e-task-03-03/notes/',
+  },
+  {
+    text: 'Vue.js 框架源码与进阶(4)',
+    link: '/fed-e-task-03-04/notes/',
   },
 ];
 
@@ -221,7 +227,10 @@ module.exports = {
           return { text, link };
         }),
       },
-      { text: '面试题', link: '/interview-questions/vue/' },
+      {
+        text: '面试题',
+        link: '/interview-questions/w-001-js-base/',
+      },
     ],
     sidebar: Object.assign({}, createSidebar(), {
       '/interview-questions/': getChildren('docs/interview-questions/'),
