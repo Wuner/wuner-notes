@@ -1,5 +1,7 @@
 # [路由和代码分割](https://ssr.vuejs.org/zh/guide/routing.html)
 
+[项目 demo](https://gitee.com/Wuner/vue-ssr-demo/tree/router/)
+
 接下来我们来了解一下如何处理通用应用中的路由。
 
 官方文档给出的解决方案肯定还是使用 vue-router，整体使用方式和纯客户端的使用方式基本一致，只需要在少许的位置做一些配置就可以了。文档中已经把配置的方式描述的很清楚了，建议大家认真看一下文档，下面我把具体的实现来演示一下。

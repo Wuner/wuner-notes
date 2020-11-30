@@ -1,5 +1,7 @@
 # [数据预取和状态](https://ssr.vuejs.org/zh/guide/data.html)
 
+[项目 demo](https://gitee.com/Wuner/vue-ssr-demo/tree/store/)
+
 接下来我们来了解一下服务端渲染中的数据预取和状态管理。
 
 [官方文档](https://ssr.vuejs.org/zh/guide/data.html) 中的描述比较枯燥，无法在很短的时间内搞清楚它到底要做什么，所以我们这里通过一个实际 的业务需求来引入这个话题。

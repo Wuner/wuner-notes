@@ -1,5 +1,7 @@
 # 构建配置
 
+[项目 demo](https://gitee.com/Wuner/vue-ssr-demo/tree/router/)
+
 ## 安装依赖
 
 ### 安装生产依赖

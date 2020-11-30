@@ -1,5 +1,7 @@
 # 源码结构
 
+[项目 demo](https://gitee.com/Wuner/vue-ssr-demo/tree/build-config/)
+
 ## 介绍构建步骤
 
 到目前为止，我们还没有讨论过如何将相同的 Vue 应用程序提供给客户端。为了做到这一点，我们需要使用 webpack 来打包我们的 Vue 应用程序。事实上，我们可能需要在服务器上使用 webpack 打包 Vue 应用程序，因为：

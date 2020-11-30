@@ -1,5 +1,7 @@
 # [管理页面 Head](https://ssr.vuejs.org/zh/guide/head.html)
 
+[项目 demo](https://gitee.com/Wuner/vue-ssr-demo/tree/ssr-head/)
+
 无论是服务端渲染还是客户端渲染，它们都使用的同一个页面模板。
 
 页面中的 body 是动态渲染出来的，但是页面的 head 是写死的，也就说我们希望不同的页面可以拥有自己的 head 内容，例如页面的 title、meta 等内容，所以下面我们来了解一下如何让不同的页面来定制自己的 head 头部内容。
