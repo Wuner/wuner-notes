@@ -177,6 +177,10 @@ const items = [
     text: 'Vue.js 框架源码与进阶(4)',
     link: '/fed-e-task-03-04/notes/',
   },
+  {
+    text: 'Vue.js 框架源码与进阶(5)',
+    link: '/fed-e-task-03-05/notes/',
+  },
 ];
 
 const createSidebar = () => {

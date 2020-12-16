@@ -103,7 +103,7 @@ No Class APIs，只用 Options APIs。
 
 使用 Options APIs 最好是使用 export default Vue.extend({ ... }) 而不是 export default { ... }。
 
-其实 Vue.js 3.0 早期是想要放弃 Class APIs 的，不过无奈想要兼容，所以才保留下来了。
+其实 Vue.js 3.x 早期是想要放弃 Class APIs 的，不过无奈想要兼容，所以才保留下来了。
 
 ## 相关扩展
 

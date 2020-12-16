@@ -292,7 +292,7 @@ yarn add jest -D -W
 给指定的工作区安装依赖
 
 ```
-yarn workspace myy-button add lodash@4
+yarn workspace my-button add lodash@4
 ```
 
 给所有的工作区安装依赖
@@ -706,6 +706,6 @@ module.exports = (plop) => {
 ```
 yarn build:prod
 git add .
-git commit -m"最后发布"
+git commit -m "最后发布"
 yarn lerna
 ```
