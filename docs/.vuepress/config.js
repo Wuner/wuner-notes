@@ -77,9 +77,15 @@ const dealWithFiles = (result) => {
 };
 
 const getQuestionsChildren = (srcPath) => {
-  const result = readDirSync(path.join('docs', srcPath, 'code'));
-  let files = dealWithFiles(result);
-  files.unshift(srcPath);
+  let files = [];
+  try {
+    const result = readDirSync(path.join('docs', srcPath, 'code'));
+    files = dealWithFiles(result);
+    files.unshift(srcPath);
+  } catch (e) {
+    console.log(e);
+  }
+
   return files;
 };
 
