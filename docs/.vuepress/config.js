@@ -78,12 +78,11 @@ const dealWithFiles = (result) => {
 
 const getQuestionsChildren = (srcPath) => {
   let files = [];
-  try {
+
+  if (fs.existsSync(path.join('docs', srcPath, 'code'))) {
     const result = readDirSync(path.join('docs', srcPath, 'code'));
     files = dealWithFiles(result);
     files.unshift(srcPath);
-  } catch (e) {
-    console.log(e);
   }
 
   return files;
